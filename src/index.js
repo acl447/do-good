@@ -8,6 +8,7 @@ import CallbackPage from './pages/callback';
 import Auth from './components/Auth';
 import AllPostsPage from './pages/allposts';
 import AboutPage from './pages/about';
+import InboxPage from './pages/inbox';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={HomePage}/>
             <Route path="/about" component={AboutPage} />
+            <Route path="/inbox" component={InboxPage} />
             <Route path="/dashboard" component={DashboardPage}/>
             <Route path="/callback" component={CallbackPage} />
             <Route path="/allposts" component={AllPostsPage} />
