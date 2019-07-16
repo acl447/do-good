@@ -9,7 +9,7 @@ const HomePage = () => (
   <AuthConsumer>
     {({ authenticated }) =>
       authenticated ? (
-        <Redirect to="/inbox" />
+        <Redirect to="/dashboard" />
       ) : (
         <div>
           <h1>Are You Ready to Do Good?</h1>
