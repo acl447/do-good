@@ -5,7 +5,7 @@ import { AuthConsumer } from "../authContext";
 const Logout = () => (
   <AuthConsumer>
     {({ logout }) => (
-      <button className="btn btn-sm btn-default" onClick={logout}>
+      <button className="logout-button" onClick={logout}>
         Logout
       </button>
     )}
