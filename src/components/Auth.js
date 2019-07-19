@@ -48,6 +48,9 @@ class Auth extends Component {
   };
 
   setSession(data) {
+    
+    console.log(data);
+
     const user = {
       id: data.sub,
       email: data.email,
@@ -58,7 +61,10 @@ class Auth extends Component {
       accessToken: data.accessToken,
       user
     });
+
+    console.log("this.state.user:" + this.state.user);
   }
+
 
   render() {
     const authProviderValue = {

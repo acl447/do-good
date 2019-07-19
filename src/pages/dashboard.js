@@ -5,7 +5,6 @@ import { AuthConsumer } from "../authContext";
 import Can from "../components/Can";
 import Logout from "../components/Logout";
 import Profile from "../components/Profile";
-import PostsList from "../components/PostsList.js";
 
 const DashboardPage = () => (
   <AuthConsumer>
@@ -15,10 +14,9 @@ const DashboardPage = () => (
         perform="dashboard-page:visit"
         yes={() => (
           <div>
-            <h1>Dashboard</h1>
+            <h1>My Profile</h1>
             <Logout />
             <Profile />
-            <PostsList />
           </div>
         )}
         no={() => <Redirect to="/" />}

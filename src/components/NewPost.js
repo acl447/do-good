@@ -4,7 +4,15 @@ import { Col, Row, Container} from "./Grid/index";
 
 import { Input, TextArea, FormBtn } from "./Form/index";
 
-function NewPost() {
+function NewPost(props) {
+
+    handleInputChange() {
+
+
+
+    };
+ 
+
     return (
         
         <Container fluid>
@@ -13,10 +21,10 @@ function NewPost() {
            
            <form>
              <Input
-               value={this.state.title}
+               value={props.user.name}
                onChange={this.handleInputChange}
-               name="title"
-               placeholder="Title (required)"
+               name="username"
+               placeholder="Enter Username"
              />
              <Input
                value={this.state.author}
