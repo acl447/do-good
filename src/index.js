@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 import HomePage from './pages/home';
 import DashboardPage from './pages/dashboard';
@@ -9,16 +11,20 @@ import Auth from './components/Auth';
 import AllPostsPage from './pages/allposts';
 import AboutPage from './pages/about';
 import InboxPage from './pages/inbox';
-// import Nav from './components/Nav';
+import './index.css'
+
+// import { PropertySignature } from '@babel/types';
+// import NavTabs from './components/Navbar/NavTabs.js';
 
 function App() {
   return (
+     // onClick={props.click} needs to be added to App Container somewhow
     <div className="App container">
       <Auth>
         <div className="jumbotron">
           <Router>
             <div>
-              {/* <Nav /> */}
+              {/* <NavTabs /> */}
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />

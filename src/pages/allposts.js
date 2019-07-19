@@ -1,9 +1,9 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
-
+import NavTabs from "../components/Navbar/NavTabs";
 import { AuthConsumer } from "../authContext";
 import Can from "../components/Can";
-import Logout from "../components/Logout";
+// import Logout from "../components/Logout";
 import PostsList from "../components/PostsList.js";
 
 const AllPostsPage = () => (
@@ -14,8 +14,9 @@ const AllPostsPage = () => (
         perform="allposts-page:visit"
         yes={() => (
           <div>
+            <NavTabs />
             <h1>All Posts</h1>
-            <Logout />
+            {/* <Logout /> */}
             <PostsList />
           </div>
         )}
