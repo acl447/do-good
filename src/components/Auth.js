@@ -4,6 +4,8 @@ import auth0 from "auth0-js";
 import {AUTH_CONFIG} from "../auth0-variables";
 import {AuthProvider} from "../authContext";
 
+// import './utils';
+
 const auth = new auth0.WebAuth({
   domain: AUTH_CONFIG.domain,
   clientID: AUTH_CONFIG.clientId,
