@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import NavTabs from "../components/Navbar/NavTabs";
-import SideNav from "../components/SideNav/SideNav";
+// import SideNav from "../components/SideNav/SideNav";
 import { AuthConsumer } from "../authContext";
 import Can from "../components/Can";
 
@@ -42,7 +42,7 @@ const AboutPage = () => (
                         {/* navClickHandler={this.navToggleClickHandler} needs to go into NavTavbs? */}
                         <NavTabs />
                         {/* show={this.state.SideNavOpen} needs to go in side nav */}
-                        <SideNav />                    {/* {sideNav} */}
+                        {/* <SideNav />                    {sideNav} */}
                         {/* <NavTabs href="/about" /> */}
                         {/* <Logout /> */}
                         <h1>About Page</h1>

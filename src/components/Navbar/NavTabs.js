@@ -5,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 
 
 
-import NavToggleButton from "../SideNav/NavButton";
+// import NavToggleButton from "../SideNav/NavButton";
 import "./NavTabs.css";
 import Logout from "../Logout";
 
@@ -14,10 +14,10 @@ const NavTabs = props => (
 
   <header className="header">
     <nav className="nav_bar">
-      <div className="navbar_toggle-button">
+      {/* <div className="navbar_toggle-button">
         {/* click={props.navClickHandler} need to go into NavToggleButton? */}
-        <NavToggleButton />
-      </div>
+        {/* <NavToggleButton /> */}
+      {/* </div> */}
       <div className="nav_logo"><Link to="/" exact="true">Do Good</Link></div>
       <div className="spacer" />
       <div className="nav_items">

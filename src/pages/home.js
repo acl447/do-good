@@ -12,10 +12,11 @@ const HomePage = () => (
   <AuthConsumer>
     {({ authenticated }) =>
       authenticated ? (
-        <Redirect to="/allposts" />
+        <Redirect to="/about" />
       ) : (
         
         <div>
+          
           
           <h1>Are You Ready to Do Good?</h1>
           <h2>Do Good is ________ .</h2>
