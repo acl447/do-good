@@ -48,7 +48,7 @@ class Auth extends Component {
   };
 
   setSession(data) {
-    
+
     console.log(data);
 
     const user = {
@@ -65,6 +65,9 @@ class Auth extends Component {
     console.log("this.state.user:" + this.state.user);
   }
 
+ 
+
+  
 
   render() {
     const authProviderValue = {
