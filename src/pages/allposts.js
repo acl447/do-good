@@ -11,7 +11,7 @@ const AllPostsPage = () => (
     {({ user }) => (
       <Can
         role={user.role}
-        perform="allposts-page:visit"
+        perform="home-page:visit"
         yes={() => (
           <div>
             <NavTabs />
