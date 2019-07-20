@@ -1,29 +1,37 @@
 import React from "react";
 
+import { withRouter, Link } from 'react-router-dom';
+// import { Link } from 'reactstrap';
+
+
+
 import NavToggleButton from "../SideNav/NavButton";
 import "./NavTabs.css";
 import Logout from "../Logout";
 
-const navTabs = props => (
-<header className="header">
-  <nav className="nav_bar">
-    <div className="navbar_toggle-button">
-    {/* click={props.navClickHandler} need to go into NavToggleButton? */}
-      <NavToggleButton />
-    </div>
-    <div className="nav_logo"><a href="/">Do Good</a></div>
-    <div className="spacer" />
-    <div className="nav_items">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">Inbox</a></li>
-        <li><a href="/">Profile</a></li>
-       <Logout />
-      </ul>
-    </div>
-  </nav>
 
-</header>
+const NavTabs = props => (
+
+  <header className="header">
+    <nav className="nav_bar">
+      <div className="navbar_toggle-button">
+        {/* click={props.navClickHandler} need to go into NavToggleButton? */}
+        <NavToggleButton />
+      </div>
+      <div className="nav_logo"><Link to="/" exact="true">Do Good</Link></div>
+      <div className="spacer" />
+      <div className="nav_items">
+        <ul>
+          <Link to="/about">About</Link>
+          <Link to="/allposts">All Posts</Link>
+          <Link to="/inbox">Inbox</Link>
+          <Link to="/dashboard">Profile</Link>
+          <Logout />
+        </ul>
+      </div>
+    </nav>
+
+  </header>
 
 );
 
@@ -53,4 +61,6 @@ const navTabs = props => (
 //  );
 // }
 
-export default navTabs;
+
+export default withRouter(NavTabs);
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -14,32 +14,34 @@ import InboxPage from './pages/inbox';
 import './index.css'
 
 // import { PropertySignature } from '@babel/types';
-// import NavTabs from './components/Navbar/NavTabs.js';
+import NavTabs from './components/Navbar/NavTabs';
 
-function App() {
-  return (
-     // onClick={props.click} needs to be added to App Container somewhow
-    <div className="App container">
-      <Auth>
-        <div className="jumbotron">
-          <Router>
-            <div>
-              {/* <NavTabs /> */}
+class App extends Component {
+
+
+
+  render() {
+    return (
+      // onClick={props.click} needs to be added to App Container somewhow
+      <Router>
+        <div className="App container">
+          <Auth>
+            <div className="jumbotron">
+              <NavTabs />
               <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route path="/about" component={AboutPage} />
-                <Route path="/inbox" component={InboxPage} />
-                <Route path="/dashboard" component={DashboardPage} />
-                <Route path="/callback" component={CallbackPage} />
-                <Route path="/allposts" component={AllPostsPage} />
+                <Route exact path="/about" component={AboutPage} />
+                <Route exact path="/inbox" component={InboxPage} />
+                <Route exact path="/dashboard" component={DashboardPage} />
+                <Route exact path="/callback" component={CallbackPage} />
+                <Route exact path="/allposts" component={AllPostsPage} />
               </Switch>
             </div>
-          </Router>
+          </Auth>
         </div>
-      </Auth>
-
-    </div>
-  );
+      </Router>
+    );
+  }
 }
 
 const rootElement = document.getElementById('root');
