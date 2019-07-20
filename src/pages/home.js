@@ -12,13 +12,13 @@ const HomePage = () => (
   <AuthConsumer>
     {({ authenticated }) =>
       authenticated ? (
-        <Redirect to="/allposts" />
+        <Redirect to="/inbox" />
       ) : (
         
         <div>
           
           <h1>Are You Ready to Do Good?</h1>
-          <h2>Do Good is ________ .</h2>
+          <h2>Do Good is a community-based service that allows neighbors to give and receive goods and services without any cost or money exchange. Doing good to help each other out without expecting anything in return but gratitude.</h2>
           <h2>Please log in to begin!</h2>
           <Login />
         
