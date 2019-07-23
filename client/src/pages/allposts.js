@@ -6,7 +6,7 @@ import Can from "../components/Can";
 // import Logout from "../components/Logout";
 // import PostsList from "../components/PostsList.js";
 // import { List, ListItem } from "../components/List";
-import NewPost from "../components/NewPost";
+import Posts from "../components/Posts";
 
 const AllPostsPage = () => (
   <AuthConsumer>
@@ -21,7 +21,7 @@ const AllPostsPage = () => (
             {/* <Logout /> */}
             {/* <PostsList /> */}
            
-            <NewPost />
+            <Posts />
           </div>
         )}
         no={() => <Redirect to="/" />}
