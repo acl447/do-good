@@ -6,40 +6,60 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "./Grid";
 import { List, ListItem } from "./List";
-// import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, FormBtn } from "../components/Form";
 
-import axios from "axios";
+// import axios from "axios";
 // import { stringify } from "querystring";
 
 class Posts extends Component {
-  state={
+  state = {
     text: "",
-    posts: [],
-  }
+    posts: []
+  };
+
   componentDidMount(){
-    this.loadPosts()
-  }
+    this.loadPosts();
+  };
+
   loadPosts = () => {
     API.getPosts()
       .then(res => {
-        this.setState({ posts: res.data });
+        this.setState({ posts: res.data, text: "" });
     console.log(res.data);
   })
       .catch(err => console.log(err));
   };
 
-  handleChange=(e) => {
-    const{name,value} = e.target
-    this.setState({[name]:value})
-    
+  // deletePost = id => {
+  //   API.deletePost(id)
+  //     .then(res => this.loadPosts())
+  //     .catch(err => console.log(err));
+  // };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]:value
+    });
   };
 
-  handleClick=() => {
-    axios.post("/api/posts",{title: this.state.posts})
+  // handleClick=() => {
+  //   axios.post("/api/posts",{title: this.state.posts})
 
-    .then(res => {
-    console.log(res.data)})
-      .catch(err => console.log(err));
+  //   .then(res => {
+  //   console.log(res.data)})
+  //     .catch(err => console.log(err));
+  // };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.text) {
+      API.savePost({
+        text: this.state.text
+      })
+        .then(res => this.loadPosts())
+        .catch(err => console.log(err));
+    }
   };
 
   render() {
@@ -47,7 +67,7 @@ class Posts extends Component {
 
       <Container fluid>
       <Row>
-        {/* <Col size="md-6">
+        <Col size="md-6">
           <Jumbotron>
             <h1>Add A New Post</h1>
           </Jumbotron>
@@ -66,8 +86,8 @@ class Posts extends Component {
               Submit Post
             </FormBtn>
           </form>
-        </Col> */}
-        <Col size="md-12 sm-12">
+        </Col>
+        <Col size="md-6 sm-12">
           <Jumbotron>
             <h1>All Posts</h1>
           </Jumbotron>
