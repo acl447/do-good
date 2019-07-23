@@ -4,8 +4,9 @@ import NavTabs from "../components/Navbar/NavTabs";
 import { AuthConsumer } from "../authContext";
 import Can from "../components/Can";
 // import Logout from "../components/Logout";
-import PostsList from "../components/PostsList.js";
+// import PostsList from "../components/PostsList.js";
 // import { List, ListItem } from "../components/List";
+import NewPost from "../components/NewPost";
 
 const AllPostsPage = () => (
   <AuthConsumer>
@@ -18,9 +19,9 @@ const AllPostsPage = () => (
             <NavTabs />
             <h1>All Posts</h1>
             {/* <Logout /> */}
-            <PostsList />
+            {/* <PostsList /> */}
            
-            
+            <NewPost />
           </div>
         )}
         no={() => <Redirect to="/" />}

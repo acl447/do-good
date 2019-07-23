@@ -53,28 +53,17 @@ class NewPost extends Component {
           </Jumbotron>
           <form>
             <Input
-              value={this.state.title}
+              value={this.state.text}
               onChange={this.handleInputChange}
-              name="title"
-              placeholder="Title (required)"
+              name="text"
+              placeholder="Enter new post"
             />
-            <Input
-              value={this.state.author}
-              onChange={this.handleInputChange}
-              name="author"
-              placeholder="Author (required)"
-            />
-            <TextArea
-              value={this.state.synopsis}
-              onChange={this.handleInputChange}
-              name="synopsis"
-              placeholder="Synopsis (Optional)"
-            />
+           
             <FormBtn
-              disabled={!(this.state.author && this.state.title)}
+              disabled={!(this.state.text)}
               onClick={this.handleFormSubmit}
             >
-              Submit Book
+              Submit Post
             </FormBtn>
           </form>
         </Col> */}
