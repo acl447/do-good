@@ -71,7 +71,8 @@ class Auth extends Component {
 
   loadPosts = () => {
     API.getPosts()
-      .then(res => this.setState({ posts: res.data }))
+      .then(res => {this.setState({ posts: res.data })
+    console.log(res.data)})
       .catch(err => console.log(err));
   };
 
@@ -84,8 +85,10 @@ class Auth extends Component {
       ...this.state,
       initiateLogin: this.initiateLogin,
       handleAuthentication: this.handleAuthentication,
-      logout: this.logout
+      logout: this.logout,
+      loadPosts: this.loadPosts
     };
+    console.log(authProviderValue)
     return (
       <AuthProvider value={authProviderValue}>
         {this.props.children}
