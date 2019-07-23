@@ -1,12 +1,17 @@
-import React from "react";
 
-import { Col, Row, Container } from "./Grid/index";
+import React, { Component } from "react";
+// import DeleteBtn from "../components/DeleteBtn";
+import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Input, TextArea, FormBtn } from "./Form/index";
-import axios from "axios";
-import { stringify } from "querystring";
+import { Link } from "react-router-dom";
+import { Col, Row, Container } from "../components/Grid";
+import { List, ListItem } from "../components/List";
+// import { Input, TextArea, FormBtn } from "../components/Form";
 
-class NewPost extends React.Component {
+import axios from "axios";
+// import { stringify } from "querystring";
+
+class NewPost extends Component {
   state={
     text: "",
     posts: [],
@@ -39,124 +44,71 @@ class NewPost extends React.Component {
 
   render() {
     return (
+
       <Container fluid>
-        <Row>
-          <Col size="md-12">
+      <Row>
+        {/* <Col size="md-6">
+          <Jumbotron>
+            <h1>Add A New Post</h1>
+          </Jumbotron>
+          <form>
             <Input
-            name="text"
-            onChange={this.handleChange}
-            value={this.state.post}
+              value={this.state.title}
+              onChange={this.handleInputChange}
+              name="title"
+              placeholder="Title (required)"
             />
+            <Input
+              value={this.state.author}
+              onChange={this.handleInputChange}
+              name="author"
+              placeholder="Author (required)"
+            />
+            <TextArea
+              value={this.state.synopsis}
+              onChange={this.handleInputChange}
+              name="synopsis"
+              placeholder="Synopsis (Optional)"
+            />
+            <FormBtn
+              disabled={!(this.state.author && this.state.title)}
+              onClick={this.handleFormSubmit}
+            >
+              Submit Book
+            </FormBtn>
+          </form>
+        </Col> */}
+        <Col size="md-12 sm-12">
+          <Jumbotron>
+            <h1>All Posts</h1>
+          </Jumbotron>
+          {this.state.posts.length ? (
+            <List>
+              {this.state.posts.map(post => (
+                <ListItem key={post._id}>
+                  <Link to={"/posts/" + post._id}>
+                    <strong>
+                      {post.text}
+                    </strong>
+                  </Link>
+                  {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
+                </ListItem>
+              ))}
+            </List>
+          ) : (
+            <h3>No Results to Display</h3>
+          )}
+        </Col>
+      </Row>
+    </Container>
 
-            <button
-            onClick={this.handleClick}
-            >Text submit</button>
 
+    );
 
-            {/* <form>
-              <Input
-                value=
-                onChange={this.handleInputChange}
-                name="username"
-                placeholder="Enter Username"
-              />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-             </FormBtn>
-            </form> */}
-          </Col>
-        </Row>
-      </Container>
-
-    )
   }
+
 }
-
-// function NewPost(props) {
-
-//     handleInputChange() {
-
-
-
-//     };
-
-
-//     return (
-
-//         <Container fluid>
-//        <Row>
-//          <Col size="md-6">
-
-//            <form>
-//              <Input
-//                value={props.user.name}
-//                onChange={this.handleInputChange}
-//                name="username"
-//                placeholder="Enter Username"
-//              />
-//              <Input
-//                value={this.state.author}
-//                onChange={this.handleInputChange}
-//                name="author"
-//                placeholder="Author (required)"
-//              />
-//              <TextArea
-//                value={this.state.synopsis}
-//                onChange={this.handleInputChange}
-//                name="synopsis"
-//                placeholder="Synopsis (Optional)"
-//              />
-//              <FormBtn
-//                disabled={!(this.state.author && this.state.title)}
-//                onClick={this.handleFormSubmit}
-//              >
-//                Submit Book
-//              </FormBtn>
-//            </form>
-//          </Col>
-//          <Col size="md-6 sm-12">
-//            <Jumbotron>
-//              <h1>Books On My List</h1>
-//            </Jumbotron>
-//            {this.state.books.length ? (
-//              <List>
-//                {this.state.books.map(book => (
-//                  <ListItem key={book._id}>
-//                    <Link to={"/books/" + book._id}>
-//                      <strong>
-//                        {book.title} by {book.author}
-//                      </strong>
-//                    </Link>
-//                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
-//                  </ListItem>
-//                ))}
-//              </List>
-//            ) : (
-//              <h3>No Results to Display</h3>
-//            )}
-//          </Col>
-//        </Row>
-//      </Container>
-
-
-
-//     );
-//    }
+     
 
 export default NewPost;
 
