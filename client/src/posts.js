@@ -1,4 +1,6 @@
 const posts = [
+
+  
     {
       id: "a",
       title: "Post a",
