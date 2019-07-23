@@ -59,7 +59,9 @@ class Posts extends Component {
       })
         .then(res => this.loadPosts())
         .catch(err => console.log(err));
+        
     }
+   
   };
 
   render() {

@@ -20,6 +20,7 @@ export default {
     },
     // Saves a post to the database
     savePost: function (postData) {
+        console.log(postData);
         return axios.post("/api/posts", postData);
     }
 };
