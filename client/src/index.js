@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
-import HomePage from './pages/home';
+import HomePage from './pages/signin';
 import DashboardPage from './pages/dashboard';
 import CallbackPage from './pages/callback';
 import Auth from './components/Auth';
