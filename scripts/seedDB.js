@@ -40,6 +40,9 @@ const postSeed = [
 ];
 
 
+
+
+
 db.Post
   .remove({})
   .then(() => db.Post.collection.insertMany(postSeed))
