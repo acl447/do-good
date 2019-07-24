@@ -14,7 +14,11 @@ import InboxPage from './pages/inbox';
 import './index.css'
 
 // import { PropertySignature } from '@babel/types';
+<<<<<<< HEAD:client/src/index.js
 // import NavTabs from './components/Navbar/NavTabs';
+=======
+//import NavTabs from './components/Navbar/NavTabs';
+>>>>>>> sign-in-page-jv:src/index.js
 
 class App extends Component {
 
@@ -27,14 +31,18 @@ class App extends Component {
         <div className="App container">
           <Auth>
             <div className="jumbotron">
+<<<<<<< HEAD:client/src/index.js
         
+=======
+          
+>>>>>>> sign-in-page-jv:src/index.js
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />
                 <Route exact path="/inbox" component={InboxPage} />
                 <Route exact path="/dashboard" component={DashboardPage} />
                 <Route exact path="/callback" component={CallbackPage} />
-                <Route exact path="/allposts" component={AllPostsPage} />
+                <Route exact path="/home" component={AllPostsPage} />
               </Switch>
             </div>
           </Auth>

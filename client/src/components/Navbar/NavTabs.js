@@ -21,10 +21,10 @@ const NavTabs = props => (
       <div className="spacer" />
       <div className="nav_items">
         <ul>
-          <Link to="/about" className="px-4">About</Link>
-          <Link to="/allposts" className="px-4">All Posts</Link>
-          <Link to="/inbox" className="px-4">Inbox</Link>
-          <Link to="/dashboard" className="px-4">Profile</Link>
+          <Link to="/about">About</Link>
+          <Link to="/home">Home</Link>
+          <Link to="/inbox">Inbox</Link>
+          <Link to="/dashboard">Profile</Link>
           <Logout />
         </ul>
       </div>

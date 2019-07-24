@@ -49,7 +49,26 @@ const AboutPage = () => (
                         {/* <Profile /> */}
                         <main style={{marginTop: "100px"}}>
                         <p>
-                        Do Good is a community-based service that allows neighbors to give and receive goods and services without any cost or money exchange. Doing good to help each other out without expecting anything in return but gratitude. </p>
+                        Our MISSION is to facilitate Do Good so that they can create the needed processes, opportunities and projects to satisfy 
+                        their needs within the framework of our vision and core values. 
+                        <br></br>
+                        Our VALUES are integrity, empowerment, community, kindness, helpfulness, generosity and inclusiveness. 
+                        Do Good is a dynamic web application that encourages relationships between neighbors. 
+                        Do Good provides an outlet to express personal 
+                        and familiar needs such as shoveling a driveway, getting a babysitter, getting your kids a ride to hockey practice, 
+                        finding orders for girl scout cookies, or even just letting the neighborhood know you're having a pool party next week. 
+                        In the hectic world of today what we really need is to Do Good.</p>
+                        <br></br>
+<h2> The Developers
+<br></br>
+Jill Veltrie
+<br></br>
+Ally Lesser
+<br></br>
+Ivana Langerova
+<br></br>
+Laura Schooley
+</h2>
                         </main>
                        
                     </div>
