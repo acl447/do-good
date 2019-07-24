@@ -14,7 +14,7 @@ import InboxPage from './pages/inbox';
 import './index.css'
 
 // import { PropertySignature } from '@babel/types';
-// import NavTabs from './components/Navbar/NavTabs';
+//import NavTabs from './components/Navbar/NavTabs';
 
 class App extends Component {
 
@@ -27,7 +27,7 @@ class App extends Component {
         <div className="App container">
           <Auth>
             <div className="jumbotron">
-        
+          
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />
