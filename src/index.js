@@ -34,7 +34,7 @@ class App extends Component {
                 <Route exact path="/inbox" component={InboxPage} />
                 <Route exact path="/dashboard" component={DashboardPage} />
                 <Route exact path="/callback" component={CallbackPage} />
-                <Route exact path="/allposts" component={AllPostsPage} />
+                <Route exact path="/home" component={AllPostsPage} />
               </Switch>
             </div>
           </Auth>
