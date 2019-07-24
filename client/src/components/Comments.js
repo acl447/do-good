@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "./Jumbotron";
@@ -7,25 +6,24 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "./Grid";
 import { List, ListItem } from "./List";
 import { Input, FormBtn } from "../components/Form";
-// import Comments from "./Comments";
 
 // import axios from "axios";
 // import { stringify } from "querystring";
 
-class Posts extends Component {
+class Comments extends Component {
   state = {
     text: "",
-    posts: [],
+    comments: [],
   };
 
   componentDidMount(){
-    this.loadPosts();
+    this.loadComments();
   };
 
-  loadPosts = () => {
-    API.getPosts()
+  loadComments = () => {
+    API.getComments()
       .then(res => {
-        this.setState({ posts: res.data, text: "" });
+        this.setState({ comments: res.data, text: "" });
     console.log(res.data);
   })
       .catch(err => console.log(err));
@@ -55,72 +53,54 @@ class Posts extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.text) {
-      API.savePost({
+      API.saveComment({
         text: this.state.text
       })
-        .then(res => this.loadPosts())
+        .then(res => this.loadComments())
         .catch(err => console.log(err));
         
     }
    
   };
 
- 
-
   render() {
     return (
 
       <Container fluid>
       <Row>
-        <Col size="md-4">
+        <Col size="md-6">
           <Jumbotron>
-            <h1>Add A New Post</h1>
+            <h1>Add A New Comment</h1>
           </Jumbotron>
           <form>
             <Input
               value={this.state.text}
               onChange={this.handleInputChange}
               name="text"
-              placeholder="Enter new post"
+              placeholder="Enter new comment"
             />
            
             <FormBtn
               disabled={!(this.state.text)}
               onClick={this.handleFormSubmit}
             >
-              Submit Post
+              Submit Comment
             </FormBtn>
           </form>
         </Col>
-        <Col size="md-4">
+        <Col size="md-6 sm-12">
           <Jumbotron>
-            <h1>All Posts</h1>
+            <h1>Comments</h1>
           </Jumbotron>
-          {this.state.posts.length ? (
+          {this.state.comments.length ? (
             <List>
-              {this.state.posts.map(post => (
-                <ListItem key={post._id}>
-                  <Link to={"/posts/" + post._id}>
+              {this.state.comments.map(comment => (
+                <ListItem key={comment._id}>
+                  <Link to={"/comments/" + comment._id}>
                     <strong>
-                      {post.text}
-
+                      {comment.text}
                     </strong>
-                  
-                    
                   </Link>
-                  <div>Comments:</div>
-                  <Link to={"/posts/" + post._id}>
-                     
-                 {post.comments.map(comment => (
-
-                   <ListItem>
-                     {comment.text}
-                   </ListItem>
-
-
-                 ))}
-                  </Link>
-                  
                   {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
                 </ListItem>
               ))}
@@ -129,10 +109,6 @@ class Posts extends Component {
             <h3>No Results to Display</h3>
           )}
         </Col>
-        {/* <Col size="md-4"> */}
-        
-        {/* <Comments /> */}
-        {/* </Col> */}
       </Row>
     </Container>
 
@@ -144,5 +120,5 @@ class Posts extends Component {
 }
      
 
-export default Posts;
+export default Comments;
 
