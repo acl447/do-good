@@ -1,5 +1,5 @@
 import React from "react";
-
+import Posts from "./";
 import posts from "../posts";
 import {AuthConsumer} from "../authContext";
 import Can from "./Can";
@@ -8,6 +8,7 @@ const PostsList = () => (
   <AuthConsumer>
     {({user}) => (
       <div>
+        <Posts/>
         <h2>Posts List</h2>
         <table className="table">
           <thead>

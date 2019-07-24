@@ -3,6 +3,7 @@ import auth0 from "auth0-js";
 
 import {AUTH_CONFIG} from "../auth0-variables";
 import {AuthProvider} from "../authContext";
+import API from "../utils/API";
 
 // import './utils';
 
@@ -20,7 +21,8 @@ class Auth extends Component {
     user: {
       role: "visitor"
     },
-    accessToken: ""
+    accessToken: "",
+    posts: []
   };
 
   initiateLogin = () => {
@@ -67,6 +69,13 @@ class Auth extends Component {
     console.log("this.state.user:" + this.state.user);
   }
 
+  loadPosts = () => {
+    API.getPosts()
+      .then(res => {this.setState({ posts: res.data })
+    console.log(res.data)})
+      .catch(err => console.log(err));
+  };
+
  
 
   
@@ -76,8 +85,10 @@ class Auth extends Component {
       ...this.state,
       initiateLogin: this.initiateLogin,
       handleAuthentication: this.handleAuthentication,
-      logout: this.logout
+      logout: this.logout,
+      loadPosts: this.loadPosts
     };
+    console.log(authProviderValue)
     return (
       <AuthProvider value={authProviderValue}>
         {this.props.children}
