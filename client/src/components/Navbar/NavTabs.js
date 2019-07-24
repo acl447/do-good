@@ -22,7 +22,7 @@ const NavTabs = props => (
       <div className="nav_items">
         <ul>
           <Link to="/about" className="px-4">About</Link>
-          <Link to="/allposts" className="px-4">All Posts</Link>
+          <Link to="/home" className="px-4">All Posts</Link>
           <Link to="/inbox" className="px-4">Inbox</Link>
           <Link to="/dashboard" className="px-4">Profile</Link>
           <Logout />

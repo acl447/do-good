@@ -8,7 +8,7 @@ import HomePage from './pages/signin';
 import DashboardPage from './pages/dashboard';
 import CallbackPage from './pages/callback';
 import Auth from './components/Auth';
-import AllPostsPage from './pages/allposts';
+import AllPostsPage from './pages/home';
 import AboutPage from './pages/about';
 import InboxPage from './pages/inbox';
 import './index.css'
@@ -34,7 +34,7 @@ class App extends Component {
                 <Route exact path="/inbox" component={InboxPage} />
                 <Route exact path="/dashboard" component={DashboardPage} />
                 <Route exact path="/callback" component={CallbackPage} />
-                <Route exact path="/allposts" component={AllPostsPage} />
+                <Route exact path="/home" component={AllPostsPage} />
               </Switch>
             </div>
           </Auth>

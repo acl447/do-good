@@ -1,6 +1,6 @@
 const rules = {
     visitor: {
-      static: ["home-page:visit"]
+      static: ["signin-page:visit"]
     },
     writer: {
       static: [
@@ -9,7 +9,7 @@ const rules = {
         "users:getSelf",
         "home-page:visit",
         "dashboard-page:visit",
-        "allposts-page:visit",
+        "signin-page:visit",
         "about-page:visit",
         "inbox-page:visit"
       ],
@@ -28,9 +28,9 @@ const rules = {
         "posts:delete",
         "users:get",
         "users:getSelf",
-        "home-page:visit",
+        "signin-page:visit",
         "dashboard-page:visit",
-        "allposts-page:visit",
+        "home-page:visit",
         "about-page:visit",
         "inbox-page:visit"
       ]
