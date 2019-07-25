@@ -3,9 +3,7 @@ import auth0 from "auth0-js";
 
 import {AUTH_CONFIG} from "../auth0-variables";
 import {AuthProvider} from "../authContext";
-import API from "../utils/API";
 
-// import './utils';
 
 const auth = new auth0.WebAuth({
   domain: AUTH_CONFIG.domain,
@@ -21,8 +19,7 @@ class Auth extends Component {
     user: {
       role: "visitor"
     },
-    accessToken: "",
-    posts: []
+    accessToken: ""
   };
 
   initiateLogin = () => {
@@ -68,17 +65,6 @@ class Auth extends Component {
 
     console.log("this.state.user:" + this.state.user);
   }
-
-  loadPosts = () => {
-    API.getPosts()
-      .then(res => {this.setState({ posts: res.data })
-    console.log(res.data)})
-      .catch(err => console.log(err));
-  };
-
- 
-
-  
 
   render() {
     const authProviderValue = {
