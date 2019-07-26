@@ -1,16 +1,17 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const postSchema = new Schema({
-  text: { type: String, required: true }
+const commentSchema = new Schema({
+  text: { type: String, required: false },
+  
   
   
   //date: { type: Date, default: Date.now }
 });
 
-const Post = mongoose.model("Post", postSchema);
+const Comment = mongoose.model("Comment", commentSchema);
 
-module.exports = Post;
+module.exports = Comment;
 
 /*email: {
   type: String,

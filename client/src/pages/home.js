@@ -23,8 +23,6 @@ const AllPostsPage = () => (
 
             </div>
             <NavTabs />
-            <br></br>
-            <h1>Posts</h1>
           
             {/* <Logout /> */}
             {/* <PostsList /> */}

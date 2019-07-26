@@ -12,7 +12,7 @@ const HomePage = () => (
   <AuthConsumer>
     {({ authenticated }) =>
       authenticated ? (
-        <Redirect to="/inbox" />
+        <Redirect to="/home" />
       ) : (
       
         <div class="signin">
