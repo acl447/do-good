@@ -7,17 +7,25 @@ import Can from "../components/Can";
 // import PostsList from "../components/PostsList.js";
 // import { List, ListItem } from "../components/List";
 import Posts from "../components/Posts";
+import "./allposts.css";
 
 const AllPostsPage = () => (
   <AuthConsumer>
+    
     {({ user }) => (
       <Can
         role={user.role}
         perform="home-page:visit"
         yes={() => (
+          
           <div>
+            <div class="allposts">
+
+            </div>
             <NavTabs />
-            <h1>All Posts</h1>
+            <br></br>
+            <h1>Posts</h1>
+          
             {/* <Logout /> */}
             {/* <PostsList /> */}
            

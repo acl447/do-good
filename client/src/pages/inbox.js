@@ -6,7 +6,7 @@ import Can from "../components/Can";
 // import Logout from "../components/Logout";
 // import NavTabs from "../components/NavTabs";
 // import Profile from "../components/Profile";
-
+import "./inbox.css";
 
 const InboxPage = () => (
     <AuthConsumer>
@@ -19,6 +19,7 @@ const InboxPage = () => (
                         <NavTabs />
                         {/* <NavTabs href="/about" /> */}
                         {/* <Logout /> */}
+                        <br></br>
                         <h1>Inbox Page</h1>
                         {/* <Profile /> */}
                         <p>

@@ -1,11 +1,12 @@
 import React from "react";
-
-import {AuthConsumer} from "../authContext";
+import "./Profile.css";
+import {AuthConsumer} from "../../authContext";
 
 const Profile = () => (
   <AuthConsumer>
     {({user}) => (
-      <div>
+
+        <div>
         <ul>
           <li>ID: {user.id}</li>
           <li>My Email: {user.email}</li>

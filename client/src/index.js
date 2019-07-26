@@ -14,11 +14,7 @@ import InboxPage from './pages/inbox';
 import './index.css'
 
 // import { PropertySignature } from '@babel/types';
-<<<<<<< HEAD:client/src/index.js
-// import NavTabs from './components/Navbar/NavTabs';
-=======
 //import NavTabs from './components/Navbar/NavTabs';
->>>>>>> sign-in-page-jv:src/index.js
 
 class App extends Component {
 
@@ -28,14 +24,13 @@ class App extends Component {
     return (
       // onClick={props.click} needs to be added to App Container somewhow
       <Router>
-        <div className="App container">
-          <Auth>
-            <div className="jumbotron">
-<<<<<<< HEAD:client/src/index.js
+        <div className="app-container">
         
-=======
+
           
->>>>>>> sign-in-page-jv:src/index.js
+          <Auth>
+            <div>
+          
               <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/about" component={AboutPage} />

@@ -4,7 +4,7 @@ import NavTabs from "../components/Navbar/NavTabs";
 // import SideNav from "../components/SideNav/SideNav";
 import { AuthConsumer } from "../authContext";
 import Can from "../components/Can";
-
+import "./about.css";
 // import Logout from "../components/Logout";
 // import Profile from "../components/Profile";
 
@@ -45,21 +45,28 @@ const AboutPage = () => (
                         {/* <SideNav />                    {sideNav} */}
                         {/* <NavTabs href="/about" /> */}
                         {/* <Logout /> */}
-                        <h1>About Page</h1>
+                        <div class="about">
+
+                        </div>
+                        <br>
+                        </br>
+                        
                         {/* <Profile /> */}
-                        <main style={{marginTop: "100px"}}>
-                        <p>
+                        <main style={{marginTop: "5px"}}>
+                        <h5>
+                        <h1>About Page</h1>
                         Our MISSION is to facilitate Do Good so that they can create the needed processes, opportunities and projects to satisfy 
                         their needs within the framework of our vision and core values. 
+                        <br></br>
                         <br></br>
                         Our VALUES are integrity, empowerment, community, kindness, helpfulness, generosity and inclusiveness. 
                         Do Good is a dynamic web application that encourages relationships between neighbors. 
                         Do Good provides an outlet to express personal 
                         and familiar needs such as shoveling a driveway, getting a babysitter, getting your kids a ride to hockey practice, 
                         finding orders for girl scout cookies, or even just letting the neighborhood know you're having a pool party next week. 
-                        In the hectic world of today what we really need is to Do Good.</p>
+                        In the hectic world of today what we really need is to Do Good.</h5>
                         <br></br>
-<h2> The Developers
+<h6> The Developers
 <br></br>
 Jill Veltrie
 <br></br>
@@ -68,7 +75,7 @@ Ally Lesser
 Ivana Langerova
 <br></br>
 Laura Schooley
-</h2>
+</h6>
                         </main>
                        
                     </div>
