@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
 
-    getUsers: function () {
+    getAllUsers: function () {
         return axios.get("/api/users");
     },
 

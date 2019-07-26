@@ -33,7 +33,53 @@ const postSeed = [
   }
 ];
 
+const userSeed = [
+  {
+    information: {
+      firstName: "Britney",
+      lastName: "Spears",
+      userName: "TheBritt",
+      email: "britneyspears@britt.com",
+      zip: "54321"
+    }
+  },
 
+  
+  {
+    information: {
+    firstName: "Michael",
+    lastName: "Scott",
+    userName: "TheOffice",
+    email: "theoffice@scranton.com",
+    zip: "54231"
+}
+},
+
+{
+  information: {
+  firstName: "Lion",
+  lastName: "King",
+  userName: "TheSimba",
+  email: "hakunamatata@king.com",
+  zip: "51234"
+}
+},
+
+];
+
+
+
+  db.User
+  .remove({})
+    .then(() => db.User.collection.insertMany(userSeed))
+    .then(data => {
+      console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
 
 
