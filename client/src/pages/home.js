@@ -7,7 +7,7 @@ import Can from "../components/Can";
 // import PostsList from "../components/PostsList.js";
 // import { List, ListItem } from "../components/List";
 import Posts from "../components/Posts";
-import "./allposts.css";
+import "./home.css";
 
 const AllPostsPage = () => (
   <AuthConsumer>
@@ -19,7 +19,7 @@ const AllPostsPage = () => (
         yes={() => (
           
           <div>
-            <div class="allposts">
+            <div class="home">
 
             </div>
             <NavTabs />
