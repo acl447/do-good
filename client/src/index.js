@@ -25,9 +25,12 @@ class App extends Component {
     return (
       
       <Router>
-        <div className="App container">
+        <div className="app-container">
+        
+
+          
           <Auth>
-            <div className="jumbotron">
+            <div>
           
               <Switch>
                 <Route exact path="/" component={HomePage} />
