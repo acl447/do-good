@@ -17,7 +17,7 @@ const AllPostsPage = () => (
         yes={() => (
           <div>
             <NavTabs />
-            <h1>All Posts</h1>
+          
             {/* <Logout /> */}
             {/* <PostsList /> */}
            

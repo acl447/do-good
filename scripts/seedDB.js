@@ -11,9 +11,7 @@ mongoose.connect(
 const postSeed = [
   {
     text: "sequin jumpsuit",
-    comments: [{
-      text: "I want it! --Ally"
-    }, {text: "cool! --Ivana"}, {text: "woohoo! --Jill"}]
+    
 
     //date: new Date(Date.now())
   },
@@ -21,9 +19,7 @@ const postSeed = [
   {
 
     text: "lawn mower",
-    comments: [{
-      text: "dibs! --Michael"
-    }, {text: "yeah! --Blair"}, {text: "woot! --Ches"}]
+
 
     //date: new Date(Date.now())
   },
@@ -31,9 +27,7 @@ const postSeed = [
   {
 
     text: "freshly made banana bread",
-    comments: [{
-      text: "cool! --Ally"
-    }, {text: "sweet! --Aaron"}, {text: "looks good! --Nik"}]
+   
 
     //date: new Date(Date.now())
   }

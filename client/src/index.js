@@ -12,6 +12,7 @@ import AllPostsPage from './pages/home';
 import AboutPage from './pages/about';
 import InboxPage from './pages/inbox';
 import './index.css'
+import DetailPage from './pages/detail';
 
 // import { PropertySignature } from '@babel/types';
 //import NavTabs from './components/Navbar/NavTabs';
@@ -35,6 +36,7 @@ class App extends Component {
                 <Route exact path="/dashboard" component={DashboardPage} />
                 <Route exact path="/callback" component={CallbackPage} />
                 <Route exact path="/home" component={AllPostsPage} />
+                <Route exact path="/posts/:id" component={DetailPage} />
               </Switch>
             </div>
           </Auth>
