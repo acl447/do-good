@@ -1,5 +1,5 @@
 import React from "react";
-import Posts from "./";
+import Posts from "./Posts";
 import posts from "../posts";
 import {AuthConsumer} from "../authContext";
 import Can from "./Can";

@@ -1,20 +1,22 @@
 
 import React, { Component } from "react";
 // import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "./Jumbotron";
-import API from "../utils/API";
+// import Jumbotron from "../Jumbotron";
+import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "./Grid";
-import { List, ListItem } from "./List";
-import { Input, FormBtn } from "../components/Form";
+import { Col, Row, Container } from "../Grid";
+import { List, ListItem } from "../List";
+import { Input, FormBtn } from "../Form";
+// import Comments from "./Comments";
 
 // import axios from "axios";
 // import { stringify } from "querystring";
+import "./style.css";
 
 class Posts extends Component {
   state = {
     text: "",
-    posts: []
+    posts: [],
   };
 
   componentDidMount(){
@@ -64,15 +66,14 @@ class Posts extends Component {
    
   };
 
+ 
+
   render() {
     return (
 
       <Container fluid>
       <Row>
-        <Col size="md-6">
-          <Jumbotron>
-            <h1>Add A New Post</h1>
-          </Jumbotron>
+        <Col size="md-4">
           <form>
             <Input
               value={this.state.text}
@@ -89,10 +90,8 @@ class Posts extends Component {
             </FormBtn>
           </form>
         </Col>
-        <Col size="md-6 sm-12">
-          <Jumbotron>
-            <h1>All Posts</h1>
-          </Jumbotron>
+        <Col size="md-8">
+          
           {this.state.posts.length ? (
             <List>
               {this.state.posts.map(post => (
@@ -100,8 +99,13 @@ class Posts extends Component {
                   <Link to={"/posts/" + post._id}>
                     <strong>
                       {post.text}
+
                     </strong>
+                  
+                    
                   </Link>
+                  
+                  
                   {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
                 </ListItem>
               ))}
@@ -110,6 +114,7 @@ class Posts extends Component {
             <h3>No Results to Display</h3>
           )}
         </Col>
+      
       </Row>
     </Container>
 

@@ -47,8 +47,7 @@ li a:hover {
     background-size:cover;
     background-position: center;
     background-color: #cccccc;
-    
-    
+  
    }
 h1 {
     margin-left: 40%;
@@ -63,4 +62,11 @@ h2 {
     border-radius: 25px;
     margin-top: 56px;
 }
+.app-container {
+  margin-top: 3.5%;
+  height: 100%;
+  width: 100%;
+}
+
+
 
