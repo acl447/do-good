@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import NavTabs from "../components/Navbar/NavTabs";
 import { AuthConsumer } from "../authContext";
 import Can from "../components/Can";
+import "./home.css";
 // import Logout from "../components/Logout";
 // import PostsList from "../components/PostsList.js";
 // import { List, ListItem } from "../components/List";
@@ -15,7 +16,7 @@ const AllPostsPage = () => (
         role={user.role}
         perform="home-page:visit"
         yes={() => (
-          <div>
+          <div className="home-page">
             <NavTabs />
             <h1>All Posts</h1>
             {/* <Logout /> */}
