@@ -23,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      // onClick={props.click} needs to be added to App Container somewhow
+      
       <Router>
         <div className="App container">
           <Auth>
