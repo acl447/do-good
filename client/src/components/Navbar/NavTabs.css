@@ -31,6 +31,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  position: relative;
 }
 .header .nav_bar .nav_items li {
   padding: 0 0.5rem;
