@@ -10,15 +10,19 @@ mongoose.connect(
 
 const postSeed = [
   {
-    text: "sequin jumpsuit",
+    title: "Socks",
+    name: "Maxine A.",
+    text: "I have 12 pairs of socks to give away that have never been worn! They're white, adult men's, size medium. Email me if interested!"
     
 
     //date: new Date(Date.now())
   },
 
   {
-
-    text: "lawn mower",
+    
+    title: "Lawn Mower",
+    name: "Charlie B.",
+    text: "PowerSmart DB2194P 21 3-in-1 160cc Gas Push Lawn Mower in great condition. Black and red. Email me if interested. "
 
 
     //date: new Date(Date.now())
@@ -26,12 +30,42 @@ const postSeed = [
 
   {
 
-    text: "freshly made banana bread",
+    title: "Freshly Made Banana Bread",
+    name: "Andrea D.",
+    text: "I have 6 loaves of fresh banana bread left over from a bake sale - just made this morning with my own family recipe! Not vegan, not gluten-free. Hurry up before they're gone! Email me!"
    
 
     //date: new Date(Date.now())
   }
 ];
+
+// const commentSeed = [
+//   {
+//     text: "What size??",
+//     username: "Jasmine M."
+    
+
+    //date: new Date(Date.now())
+  // },
+
+  // {
+
+    // text: "Is this still available? Email me! chantal@chantal.com",
+    // username: "Chantal C."
+
+
+    //date: new Date(Date.now())
+  // },
+
+  // {
+
+    // text: "Sweet! Is this still available?",
+    // username: "Oscar K."
+   
+
+    //date: new Date(Date.now())
+//   }
+// ];
 
 const userSeed = [
   {
@@ -94,6 +128,18 @@ db.Post
     console.error(err);
     process.exit(1);
   });
+
+  // db.Comment
+  // .remove({})
+  // .then(() => db.Comment.collection.insertMany(commentSeed))
+  // .then(data => {
+  //   console.log(data.result.n + " records inserted!");
+  //   process.exit(0);
+  // })
+  // .catch(err => {
+  //   console.error(err);
+  //   process.exit(1);
+  // });
 
 
   

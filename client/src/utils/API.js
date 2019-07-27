@@ -23,21 +23,21 @@ export default {
         console.log(postData);
         return axios.post("/api/posts", postData);
     },
-    // Gets all posts
-    getComments: function () {
-        return axios.get("/api/comments");
-    },
-    // Gets the post with the given id
-    getComment: function (id) {
-        return axios.get("/api/comments/" + id);
-    },
-    // Deletes the post with the given id
-    deleteComment: function (id) {
-        return axios.delete("/api/comments/" + id);
-    },
-    // Saves a post to the database
-    saveComment: function (commentData) {
-        console.log(commentData);
-        return axios.post("/api/comments", commentData);
-    }
+    // Gets all comments
+    // getComments: function () {
+    //     return axios.get("/api/comments");
+    // },
+    // Gets the comment with the given id
+    // getComment: function (id) {
+    //     return axios.get("/api/comments/" + id);
+    // },
+    // Deletes the comment with the given id
+    // deleteComment: function (id) {
+    //     return axios.delete("/api/comments/" + id);
+    // },
+    // Saves a comment to the database
+    // saveComment: function (commentData) {
+    //     console.log(commentData);
+    //     return axios.post("/api/comments", commentData);
+    // }
 };
