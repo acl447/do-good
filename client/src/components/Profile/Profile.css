@@ -1,0 +1,12 @@
+.profile_page ul {
+  margin: 150px auto;
+}
+.profile_page ul li {
+  font-size: 25px;
+  text-decoration: none;
+  padding: 10px;
+  flex-direction: row;
+  background: white;
+}
+
+/*# sourceMappingURL=Profile.css.map */
