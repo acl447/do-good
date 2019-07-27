@@ -7,7 +7,7 @@ const posts = [
       ownerId: ""
     },
     {
-      id: "b",
+      id: "b",    
       title: "Post b",
       ownerId: ""
     },

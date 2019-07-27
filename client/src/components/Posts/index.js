@@ -21,7 +21,7 @@ class Posts extends Component {
     posts: []
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.loadPosts();
   };
 
@@ -45,7 +45,7 @@ class Posts extends Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]:value
+      [name]: value
     });
   };
 
@@ -67,12 +67,12 @@ class Posts extends Component {
       })
         .then(res => this.loadPosts())
         .catch(err => console.log(err));
-        
+
     }
-   
+
   };
 
- 
+
 
   render() {
 
@@ -146,7 +146,7 @@ class Posts extends Component {
   }
 
 }
-     
+
 
 export default Posts;
 
