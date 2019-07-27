@@ -17,18 +17,23 @@ const HomePage = () => (
       
         <div class="signin">
            <header>
+             
           <div>
           <ul>
-          <h1><a class="active" href="#signin">Do Good</a></h1>
+          <h1><font color="white">Do Good</font></h1>
           </ul>
+          
         </div>
         </header>
 
           <div>
           <br></br>
+          
           <h2>Do Good is a community-based service that allows neighbors to 
             give and receive goods and services without any cost or money exchange. Doing good to help each other out without expecting anything in return but gratitude.
           <br></br>Please log in to begin!</h2>
+          
+
           <Login />
         </div>
         </div>

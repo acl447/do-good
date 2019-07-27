@@ -2,7 +2,8 @@
   position: absolute;
   top: 0px;
   width: 100%;
-  left: 0
+  left: 0;
+  
     
 }
 .signin ul {
@@ -13,8 +14,10 @@
   overflow: hidden;
   background-color:purple;
   
+  
 }
 ul  {
+  
     position: absolute;
     top: 0px;
     width: 100%;
@@ -22,11 +25,13 @@ ul  {
 }
 
 li {
+  
   float: left;
   
 }
 
 li a {
+  
   display: block;
   color: white;
   text-align: center;
@@ -36,6 +41,7 @@ li a {
 }
 
 li a:hover {
+  
   background-color: #111;
 
 
@@ -44,16 +50,19 @@ li a:hover {
 
 .signin {
     background-image: url("hands.png");
-    background-size:cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
     background-color: #cccccc;
+    height: 800px; 
    
-  
    }
-h1 {
-    margin-left: 40%;
 
-  
+h1 {
+    
+    text-shadow: 3px 2px red;
+    margin-left: 40%;
+    
 }
 h2 {
   background: rgba(255,255,255,0.8);
@@ -62,12 +71,24 @@ h2 {
     margin: 0 auto;
     border-radius: 25px;
     margin-top: 56px;
+    box-shadow: 5px 10px #888888;
 }
 .app-container {
   margin-top: 3.5%;
   height: 100%;
   width: 100%;
 }
+
+.btn {
+  position: absolute;  
+  height:50px; 
+    width:100px; 
+    margin: 200px 100px; 
+    top:50%; 
+    left:50%;
+  
+}
+
 
 
 
