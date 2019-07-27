@@ -16,19 +16,20 @@ import "./style.css";
 class Posts extends Component {
   state = {
     text: "",
-    posts: [],
+    name: "",
+    posts: []
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.loadPosts();
   };
 
   loadPosts = () => {
     API.getPosts()
       .then(res => {
-        this.setState({ posts: res.data, text: "" });
-    console.log(res.data);
-  })
+        this.setState({ posts: res.data, text: "", name: "" });
+        console.log(res.data);
+      })
       .catch(err => console.log(err));
   };
 
@@ -41,7 +42,7 @@ class Posts extends Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]:value
+      [name]: value
     });
   };
 
@@ -55,68 +56,75 @@ class Posts extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.text) {
+    if (this.state.text && this.state.name) {
       API.savePost({
-        text: this.state.text
+        text: this.state.text,
+        name: this.state.name
       })
         .then(res => this.loadPosts())
         .catch(err => console.log(err));
-        
+
     }
-   
+
   };
 
- 
+
 
   render() {
     return (
 
       <Container fluid>
-      <Row>
-        <Col size="md-4">
-          <form>
-            <Input
-              value={this.state.text}
-              onChange={this.handleInputChange}
-              name="text"
-              placeholder="Enter new post"
-            />
-           
-            <FormBtn
-              disabled={!(this.state.text)}
-              onClick={this.handleFormSubmit}
-            >
-              Submit Post
-            </FormBtn>
-          </form>
-        </Col>
-        <Col size="md-8">
-          
-          {this.state.posts.length ? (
-            <List>
-              {this.state.posts.map(post => (
-                <ListItem key={post._id}>
-                  <Link to={"/posts/" + post._id}>
-                    <strong>
-                      {post.text}
+        <Row>
+          <Col size="md-4">
+            <form>
+              <Input
+                value={this.state.text}
+                onChange={this.handleInputChange}
+                name="text"
+                placeholder="Enter new post"
+              />
+              <Input
+                value={this.state.name}
+                onChange={this.handleInputChange}
+                name="name"
+                placeholder="Enter your name"
+              />
 
-                    </strong>
-                  
-                    
-                  </Link>
-                  
-                  
-                  {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
-                </ListItem>
-              ))}
-            </List>
-          ) : (
-            <h3>No Results to Display</h3>
-          )}
-        </Col>
-      
-      </Row>
-    </Container>
+              <FormBtn
+                disabled={!(this.state.text && this.state.name)}
+                onClick={this.handleFormSubmit}
+              >
+                Submit Post
+            </FormBtn>
+            </form>
+          </Col>
+          <Col size="md-8">
+
+            {this.state.posts.length ? (
+              <List>
+                {this.state.posts.map(post => (
+                  <ListItem key={post._id}>
+                    <Link to={"/posts/" + post._id}>
+                      <strong>
+                        {post.text} by {post.name}
+
+                      </strong>
+
+
+                    </Link>
+
+
+                    {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+                <h3>No Results to Display</h3>
+              )}
+          </Col>
+
+        </Row>
+      </Container>
 
 
     );
@@ -124,7 +132,7 @@ class Posts extends Component {
   }
 
 }
-     
+
 
 export default Posts;
 

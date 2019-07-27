@@ -11,6 +11,7 @@ mongoose.connect(
 const postSeed = [
   {
     text: "sequin jumpsuit",
+    name: ""
     
 
     //date: new Date(Date.now())
@@ -19,6 +20,7 @@ const postSeed = [
   {
 
     text: "lawn mower",
+    name: ""
 
 
     //date: new Date(Date.now())
@@ -27,6 +29,7 @@ const postSeed = [
   {
 
     text: "freshly made banana bread",
+    name: ""
    
 
     //date: new Date(Date.now())
