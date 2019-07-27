@@ -13,10 +13,10 @@ const DashboardPage = () => (
         role={user.role}
         perform="dashboard-page:visit"
         yes={() => (
-          <div>
+          <div className="profile_page">
             <NavTabs />
             <br></br>
-            <h1>My Profile</h1>
+            <h1 className="my-profile">My Profile</h1>
             {/* <Logout /> */}
             <Profile />
           </div>

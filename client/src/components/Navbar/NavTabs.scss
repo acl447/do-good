@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: purple;
+    background-color: purple; 
     height: 50px;
 
     .nav_bar {
@@ -71,11 +71,6 @@
 }
 
 
-// .nav_items a:hover,
-// .nav_items a:active {
-//     color: orange;
-// }
-
 .logout-button {
     color: white;
     text-decoration: none; 
@@ -83,18 +78,3 @@
     border: none;
 }
 
-// @media (max-width: 768px) {
-//     .nav_items {
-//         display: none;
-//     }
-// }
-
-// @media (min-width: 769px) {
-//     .navbar_toggle-button {
-//         display: none;
-//     }
-
-//     .nav_logo {
-//         margin-left: 0;
-//     }
-// }

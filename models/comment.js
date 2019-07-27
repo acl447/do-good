@@ -1,17 +1,18 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+// const mongoose = require("mongoose");
+// const Schema = mongoose.Schema;
 
-const commentSchema = new Schema({
-  text: { type: String, required: false },
+// const commentSchema = new Schema({
+//   text: { type: String, required: true },
+//   username: { type: String, required: true }
   
   
   
   //date: { type: Date, default: Date.now }
-});
+// });
 
-const Comment = mongoose.model("Comment", commentSchema);
+// const Comment = mongoose.model("Comment", commentSchema);
 
-module.exports = Comment;
+// module.exports = Comment;
 
 /*email: {
   type: String,

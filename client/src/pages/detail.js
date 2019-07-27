@@ -28,7 +28,7 @@ class DetailPage extends Component {
                             <div>
                                 <NavTabs />
                                 {/* <Logout /> */}
-                                <h1>Detail Page</h1>
+                                
                                 <Detail postId={this.props.match.params.id} />
 
                             </div>
