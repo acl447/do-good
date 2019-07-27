@@ -6,8 +6,8 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid";
 import { List, ListItem } from "../List";
-import { Input, FormBtn } from "../Form";
-// import Comments from "./Comments";
+import { Input, FormBtn, TextArea } from "../Form";
+
 
 // import axios from "axios";
 // import { stringify } from "querystring";
@@ -15,22 +15,26 @@ import "./style.css";
 
 class Posts extends Component {
   state = {
+    title: "",
+    name: "",
     text: "",
-    posts: [],
+    posts: []
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.loadPosts();
   };
 
   loadPosts = () => {
     API.getPosts()
       .then(res => {
-        this.setState({ posts: res.data, text: "" });
+        this.setState({ posts: res.data, title: "", name: "", text: "" });
     console.log(res.data);
   })
       .catch(err => console.log(err));
   };
+
+  
 
   // deletePost = id => {
   //   API.deletePost(id)
@@ -41,7 +45,7 @@ class Posts extends Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]:value
+      [name]: value
     });
   };
 
@@ -55,35 +59,52 @@ class Posts extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.text) {
+    if (this.state.title && this.state.name && this.state.text) {
       API.savePost({
+        title: this.state.title,
+        name: this.state.name,
         text: this.state.text
       })
         .then(res => this.loadPosts())
         .catch(err => console.log(err));
-        
+
     }
-   
+
   };
 
- 
+
 
   render() {
+
+
     return (
 
       <Container fluid>
+      
       <Row>
         <Col size="md-4">
           <form>
             <Input
-              value={this.state.text}
+              value={this.state.title}
               onChange={this.handleInputChange}
-              name="text"
-              placeholder="Enter new post"
+              name="title"
+              placeholder="Enter post title"
             />
+
+<Input
+              value={this.state.name}
+              onChange={this.handleInputChange}
+              name="name"
+              placeholder="Enter your name"
+            />
+            <TextArea
+            value={this.state.text}
+            onChange={this.handleInputChange}
+            name="text"
+            placeholder="Enter text of post" />
            
             <FormBtn
-              disabled={!(this.state.text)}
+              disabled={!(this.state.title && this.state.name && this.state.text)}
               onClick={this.handleFormSubmit}
             >
               Submit Post
@@ -98,7 +119,7 @@ class Posts extends Component {
                 <ListItem key={post._id}>
                   <Link to={"/posts/" + post._id}>
                     <strong>
-                      {post.text}
+                      {post.title} by {post.name}
 
                     </strong>
                   
@@ -106,7 +127,7 @@ class Posts extends Component {
                   </Link>
                   
                   
-                  {/* <DeleteBtn onClick={() => this.deleteBook(book._id)} /> */}
+                  {/* <DeleteBtn onClick={() => this.deletePost(post._id)} /> */}
                 </ListItem>
               ))}
             </List>
@@ -116,6 +137,7 @@ class Posts extends Component {
         </Col>
       
       </Row>
+      
     </Container>
 
 
@@ -124,7 +146,7 @@ class Posts extends Component {
   }
 
 }
-     
+
 
 export default Posts;
 
