@@ -9,34 +9,61 @@ import API from "../utils/API";
 
 class Detail extends Component {
   state = {
-    post: {}
+    post: {},
+    // comment: {},
   };
-  
+
+
+
+
+
   componentDidMount() {
 
     console.log(this.props.postId);
 
+    // console.log(this.props.commentId);
+
     API.getPost(this.props.postId)
       .then(res => this.setState({ post: res.data }))
       .catch(err => console.log(err));
+
+
+
+    // API.getComment(this.props.commentId)
+    //   .then(res => this.setState({ comment: res.data}))
+    //   .catch(err => console.log(err));
   };
 
   render() {
     return (
       <Container fluid>
-       
-       <Row>
+
+        <Row>
           <Col size="md-12">
+            <div className="btn-group float-left">
+              <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Reply
+  </button>
+              <div className="dropdown-menu">
+                <Link to="#" className="dropdown-item">Copy and Paste into your Email:</Link>
+
+                <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
+              </div>
+            </div>
             <Jumbotron>
               <h1>
-                {this.state.post.text}
+                {this.state.post.title}
               </h1>
+              <h2>by {this.state.post.name}</h2>
+              {/* <p>Comments:</p> */}
+              {/* <p>{this.state.comment.text}</p> */}
+              <p>{this.state.post.text}</p>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/home">← Back to All Posts</Link>
+            <Link to="/home">← Back to Home</Link>
           </Col>
         </Row>
       </Container>

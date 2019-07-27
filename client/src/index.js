@@ -26,11 +26,9 @@ class App extends Component {
       
       <Router>
         <div className="app-container">
-        
-
-          
+    
           <Auth>
-            <div>
+            
           
               <Switch>
                 <Route exact path="/" component={HomePage} />
@@ -41,7 +39,7 @@ class App extends Component {
                 <Route exact path="/home" component={AllPostsPage} />
                 <Route exact path="/posts/:id" component={DetailPage} />
               </Switch>
-            </div>
+            
           </Auth>
         </div>
       </Router>
