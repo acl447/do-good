@@ -5,9 +5,12 @@ import { AuthConsumer } from "../authContext";
 const Login = () => (
   <AuthConsumer>
     {({ initiateLogin }) => (
-      <button className="btn btn-sm btn-primary" onClick={initiateLogin}>
-        Login
+      <div>
+      <button className="btn btn-sm btn-primary"  onClick={initiateLogin}>
+      <font size="+2">Login</font>
+        
       </button>
+      </div>
     )}
   </AuthConsumer>
 );

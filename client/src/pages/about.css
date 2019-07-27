@@ -4,12 +4,10 @@ main {
     background-size:cover;
     background-position: center;
     background-color: #cccccc;
-    width: 100%;
-    
+    width: 1500px;
+    height: 1200px;
 }
- .app-container {
-     
- }
+
  h5, h6 {
     background: rgba(255,255,255,0.8);
       padding: 2%;

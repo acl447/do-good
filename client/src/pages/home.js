@@ -19,15 +19,13 @@ const AllPostsPage = () => (
         perform="home-page:visit"
         yes={() => (
           <div>
-            <div class="home">
-
-            </div>
             <NavTabs />
-          
+            <div class="home">
+              {/* this needs to be the content you need to render */}
+              <Posts />
+            </div>
             {/* <Logout /> */}
             {/* <PostsList /> */}
-           
-            <Posts />
           </div>
         )}
         no={() => <Redirect to="/" />}
