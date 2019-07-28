@@ -40,25 +40,38 @@ class Detail extends Component {
 
         <Row>
           <Col size="md-12">
-            <div className="btn-group float-left">
-              <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Reply
-  </button>
-              <div className="dropdown-menu">
-                <Link to="#" className="dropdown-item">Copy and Paste into your Email:</Link>
 
-                <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
-              </div>
-            </div>
             <Jumbotron>
+             
               <h1>
-                {this.state.post.title}
+                {this.state.post.title} by {this.state.post.name}
               </h1>
-              <h2>by {this.state.post.name}</h2>
               {/* <p>Comments:</p> */}
               {/* <p>{this.state.comment.text}</p> */}
-              <p>{this.state.post.text}</p>
+
             </Jumbotron>
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-10 md-offset-1">
+            <article>
+
+              <p>
+                {this.state.post.text}
+              </p>
+              <div className="btn-group float-left">
+                <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Reply
+  </button>
+                <div className="dropdown-menu">
+                  <Link to="#" className="dropdown-item">Copy and Paste into your Email:</Link>
+
+                  <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
+                </div>
+              </div>
+
+
+            </article>
           </Col>
         </Row>
         <Row>
