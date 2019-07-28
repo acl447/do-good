@@ -51,7 +51,6 @@ const AboutPage = () => (
                         <br>
                         </br>
                         
-                        {/* <Profile /> */}
                         <main style={{marginTop: "5px"}}>
                         <h5>
                         <h1><font color="white">About Page</font></h1>
