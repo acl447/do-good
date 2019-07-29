@@ -8,6 +8,7 @@ const Profile = () => (
 
         <div className="profile_info">
         <ul>
+          <img src={user.picture} alt="user profile img"/>
           <li>ID: {user.id}</li>
           <br></br>
           <li>My Email: {user.email}</li>
