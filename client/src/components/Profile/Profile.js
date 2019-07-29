@@ -9,8 +9,10 @@ const Profile = () => (
         <div className="profile_info">
         <ul>
           <img src={user.picture} alt="user profile img"/>
+          <li>My Name: {user.name}</li>
           <li>ID: {user.id}</li>
-          <br></br>
+          <li>My Username: {user.nickname}</li>
+          {/* <br></br> */}
           <li>My Email: {user.email}</li>
         </ul>
       </div>
