@@ -55,7 +55,8 @@ class Auth extends Component {
     const user = {
       id: data.sub,
       email: data.email,
-      role: data[AUTH_CONFIG.roleUrl]
+      role: data[AUTH_CONFIG.roleUrl],
+      picture: data.picture
     };
     this.setState({
       authenticated: true,
