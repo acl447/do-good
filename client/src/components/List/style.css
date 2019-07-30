@@ -10,7 +10,7 @@
   } */
   
   .list-overflow-container li {
-    border-radius: 0px;
+    border-radius: 4px;
     border-left: none;
     border-right: none;
   }
