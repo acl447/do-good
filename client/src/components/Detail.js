@@ -45,11 +45,9 @@ class Detail extends Component {
 
             <div className="Detail_info">
 
-<<<<<<< HEAD
             
            
-=======
-            <Jumbotron>
+            
 
             <div className="btn-group float-left">
                 <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,7 +59,6 @@ class Detail extends Component {
                   <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
                 </div>
               </div>
->>>>>>> d8a30b0e6d26f373a92b94e95b2e068e8628bd40
              
               <h1>
            
@@ -72,14 +69,11 @@ class Detail extends Component {
               {/* <p>Comments:</p> */}
               {/* <p>{this.state.comment.text}</p> */}
 
-<<<<<<< HEAD
             
 </div>
-=======
         
 
-            </Jumbotron>
->>>>>>> d8a30b0e6d26f373a92b94e95b2e068e8628bd40
+            
           </Col>
         </Row>
         <Row>
