@@ -45,7 +45,7 @@ const AboutPage = () => (
                         {/* <SideNav />                    {sideNav} */}
                         {/* <NavTabs href="/about" /> */}
                         {/* <Logout /> */}
-                        <div class="about">
+                        <div className="about_info">
 
                         </div>
                         <br>

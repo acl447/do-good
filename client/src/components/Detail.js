@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "./Grid";
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import "./Detail.css"
 
@@ -11,6 +10,7 @@ class Detail extends Component {
   state = {
     post: {},
     // comment: {},
+    
   };
 
 
@@ -37,11 +37,17 @@ class Detail extends Component {
   render() {
     return (
       <Container fluid>
-
+        
+ 
         <Row>
           <Col size="md-12">
+            
 
-            <Jumbotron>
+            <div className="Detail_info">
+
+            
+           
+            
 
             <div className="btn-group float-left">
                 <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,14 +61,19 @@ class Detail extends Component {
               </div>
              
               <h1>
+           
                 {this.state.post.title} by {this.state.post.name}
+                
               </h1>
+              
               {/* <p>Comments:</p> */}
               {/* <p>{this.state.comment.text}</p> */}
 
+            
+</div>
         
 
-            </Jumbotron>
+            
           </Col>
         </Row>
         <Row>

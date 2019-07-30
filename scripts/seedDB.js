@@ -12,6 +12,7 @@ const postSeed = [
   {
     title: "Socks",
     name: "Maxine A.",
+    zipcode:"85234",
     text: "I have 12 pairs of socks to give away that have never been worn! They're white, adult men's, size medium. Email me if interested!"
     
 
@@ -22,6 +23,7 @@ const postSeed = [
     
     title: "Lawn Mower",
     name: "Charlie B.",
+    zipcode:"85296",
     text: "PowerSmart DB2194P 21 3-in-1 160cc Gas Push Lawn Mower in great condition. Black and red. Email me if interested. "
 
 
@@ -32,6 +34,7 @@ const postSeed = [
 
     title: "Freshly Made Banana Bread",
     name: "Andrea D.",
+    zipcode:"85233",
     text: "I have 6 loaves of fresh banana bread left over from a bake sale - just made this morning with my own family recipe! Not vegan, not gluten-free. Hurry up before they're gone! Email me!"
    
 
