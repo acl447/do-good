@@ -18,16 +18,16 @@ const AllPostsPage = () => (
         role={user.role}
         perform="home-page:visit"
         yes={() => (
-          <div>
+          <div className="home">
+          
             <NavTabs />
-            <div class="home">
-              {/* this needs to be the content you need to render */}
+             
               
               
-              <h1 className="user_post"> User Posts </h1>
+               {/* this needs to be the content you need to render */}
               <Posts />
             </div>
-          </div>
+          
         )}
         no={() => <Redirect to="/" />}
       />

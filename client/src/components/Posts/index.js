@@ -83,8 +83,8 @@ class Posts extends Component {
       
       <Row>
         <Col size="md-4">
-        <h1 className="new_post">Add A New Posts</h1>
-          <form>
+        <h1 className="new_post mt-2">Add A New Post</h1>
+          <form className="pb-5">
             <Input
               value={this.state.title}
               onChange={this.handleInputChange}
@@ -108,14 +108,16 @@ class Posts extends Component {
               disabled={!(this.state.title && this.state.name && this.state.text)}
               onClick={this.handleFormSubmit}
             >
-              Submit Post
+              Submit
             </FormBtn>
           </form>
         </Col>
-        <Col size="md-8">
-          
+        <Col size="md-3"></Col>
+        <Col size="md-5">
+        
           {this.state.posts.length ? (
             <List>
+              <h1 className="user_post mt-2">Posts</h1>
               {this.state.posts.map(post => (
                 <ListItem key={post._id}>
                   <Link to={"/posts/" + post._id}>
