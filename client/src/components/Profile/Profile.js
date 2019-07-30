@@ -1,6 +1,7 @@
 import React from "react";
-import "./Profile.css";
+import "./Profile.css"; 
 import {AuthConsumer} from "../../authContext";
+import { Row } from "../Grid/";
 
 const Profile = () => (
   <AuthConsumer>
@@ -8,12 +9,15 @@ const Profile = () => (
 
         <div className="profile_info">
         <ul>
-          <img src={user.picture} alt="user profile img"/>
+          <img className="user-img" src={user.picture} alt="user profile img"/>
+          <Row>
           <li>My Name: {user.name}</li>
           <li>ID: {user.id}</li>
+          </Row>
+          <Row>
           <li>My Username: {user.nickname}</li>
-          {/* <br></br> */}
           <li>My Email: {user.email}</li>
+          </Row>
         </ul>
       </div>
     )}

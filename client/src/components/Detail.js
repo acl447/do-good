@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "./Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-
+import "./Detail.css"
 
 
 
@@ -42,12 +42,25 @@ class Detail extends Component {
           <Col size="md-12">
 
             <Jumbotron>
+
+            <div className="btn-group float-left">
+                <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Reply
+  </button>
+                <div className="dropdown-menu">
+                  <Link to="#" className="dropdown-item">Copy and Paste into your Email:</Link>
+
+                  <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
+                </div>
+              </div>
              
               <h1>
                 {this.state.post.title} by {this.state.post.name}
               </h1>
               {/* <p>Comments:</p> */}
               {/* <p>{this.state.comment.text}</p> */}
+
+        
 
             </Jumbotron>
           </Col>
@@ -59,16 +72,7 @@ class Detail extends Component {
               <p>
                 {this.state.post.text}
               </p>
-              <div className="btn-group float-left">
-                <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Reply
-  </button>
-                <div className="dropdown-menu">
-                  <Link to="#" className="dropdown-item">Copy and Paste into your Email:</Link>
-
-                  <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
-                </div>
-              </div>
+             
 
 
             </article>

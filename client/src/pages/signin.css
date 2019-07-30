@@ -3,76 +3,63 @@
   top: 0px;
   width: 100%;
   left: 0;
-  
-    
 }
+
 .signin ul {
-    
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:purple;
-  
-  
+  background-color: purple;
 }
-ul  {
-  
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    left: 0
+
+ul {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: 0;
 }
 
 li {
-  
   float: left;
-  
 }
- 
+
 li a {
-  
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  
 }
 
 li a:hover {
-  
   background-color: #111;
-
-
-  
 }
 
 .signin {
-    background-image: url("hands.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-color: #cccccc;
-    height: 800px; 
-   
-   }
+  background-image: url("hands.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+  height: 1000px;
+}
 
 h1 {
-    
-    text-shadow: 3px 2px red;
-    margin-left: 40%;
-    
+  text-shadow: 3px 2px black;
+  margin-left: 40%;
 }
+
 h2 {
-  background: rgba(255,255,255,0.8);
-    padding: 10%;
-    max-width: 60%;
-    margin: 0 auto;
-    border-radius: 25px;
-    margin-top: 56px;
-    box-shadow: 5px 10px #888888;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10%;
+  max-width: 60%;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-top: 56px;
+  box-shadow: 5px 10px #888888;
 }
+
 .app-container {
   margin-top: 3.5%;
   height: 100%;
@@ -80,15 +67,12 @@ h2 {
 }
 
 .btn {
-  position: absolute;  
-  height:50px; 
-    width:100px; 
-    margin: 200px 100px; 
-    top:50%; 
-    left:50%;
-  
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  margin: 150px 150px;
+  top: 50%;
+  left: 50%;
 }
 
-
-
-
+/*# sourceMappingURL=signin.css.map */
