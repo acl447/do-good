@@ -82,39 +82,35 @@ class Posts extends Component {
     return (
 
       <Container fluid>
+      
+      <Row>
+        <Col size="md-4">
+        <h1 className="new_post">Add A New Posts</h1>
+          <form>
+            <Input
+              value={this.state.title}
+              onChange={this.handleInputChange}
+              name="title"
+              placeholder="Type of Item"
+            />
 
-        <Row>
-          <Col size="md-4">
-            <form>
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Enter post title"
-              />
-              <Input
-                value={this.state.name}
-                onChange={this.handleInputChange}
-                name="name"
-                placeholder="Enter your name"
-              />
-              <Input
-                value={this.state.zipcode}
-                onChange={this.handleInputChange}
-                name="zipcode"
-                placeholder="Enter your zipcode"
-              />
-              <TextArea
-                value={this.state.text}
-                onChange={this.handleInputChange}
-                name="text"
-                placeholder="Enter text of post" />
-
-              <FormBtn
-                disabled={!(this.state.title && this.state.name && this.state.zipcode && this.state.text)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Post
+<Input
+              value={this.state.name}
+              onChange={this.handleInputChange}
+              name="name"
+              placeholder="Your Name Here"
+            />
+            <TextArea
+            value={this.state.text}
+            onChange={this.handleInputChange}
+            name="text"
+            placeholder="Enter Description of Needed Item or Item to be Gifted" />
+           
+            <FormBtn
+              disabled={!(this.state.title && this.state.name && this.state.text)}
+              onClick={this.handleFormSubmit}
+            >
+              Submit Post
             </FormBtn>
             </form>
           </Col>

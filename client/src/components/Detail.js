@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "./Grid";
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-
+import "./Detail.css"
 
 
 
@@ -11,6 +10,7 @@ class Detail extends Component {
   state = {
     post: {},
     // comment: {},
+    
   };
 
 
@@ -37,29 +37,19 @@ class Detail extends Component {
   render() {
     return (
       <Container fluid>
-
+        
+ 
         <Row>
           <Col size="md-12">
+            
 
-            <Jumbotron>
+            <div className="Detail_info">
 
-              <h1>
-                {this.state.post.title} by {this.state.post.name}
-              </h1>
-              {/* <p>Comments:</p> */}
-              {/* <p>{this.state.comment.text}</p> */}
+            
+           
+            
 
-            </Jumbotron>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-
-              <p>
-                {this.state.post.text}
-              </p>
-              <div className="btn-group float-left">
+            <div className="btn-group float-left">
                 <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Reply
   </button>
@@ -69,6 +59,31 @@ class Detail extends Component {
                   <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
                 </div>
               </div>
+             
+              <h1>
+           
+                {this.state.post.title} by {this.state.post.name}
+                
+              </h1>
+              
+              {/* <p>Comments:</p> */}
+              {/* <p>{this.state.comment.text}</p> */}
+
+            
+</div>
+        
+
+            
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-10 md-offset-1">
+            <article>
+
+              <p>
+                {this.state.post.text}
+              </p>
+             
 
 
             </article>
