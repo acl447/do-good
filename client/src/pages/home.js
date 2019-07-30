@@ -22,10 +22,11 @@ const AllPostsPage = () => (
             <NavTabs />
             <div class="home">
               {/* this needs to be the content you need to render */}
+              
+              
+              <h1 className="user_post"> User Posts </h1>
               <Posts />
             </div>
-            {/* <Logout /> */}
-            {/* <PostsList /> */}
           </div>
         )}
         no={() => <Redirect to="/" />}

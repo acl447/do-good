@@ -83,25 +83,26 @@ class Posts extends Component {
       
       <Row>
         <Col size="md-4">
+        <h1 className="new_post">Add A New Posts</h1>
           <form>
             <Input
               value={this.state.title}
               onChange={this.handleInputChange}
               name="title"
-              placeholder="Enter post title"
+              placeholder="Type of Item"
             />
 
 <Input
               value={this.state.name}
               onChange={this.handleInputChange}
               name="name"
-              placeholder="Enter your name"
+              placeholder="Your Name Here"
             />
             <TextArea
             value={this.state.text}
             onChange={this.handleInputChange}
             name="text"
-            placeholder="Enter text of post" />
+            placeholder="Enter Description of Needed Item or Item to be Gifted" />
            
             <FormBtn
               disabled={!(this.state.title && this.state.name && this.state.text)}

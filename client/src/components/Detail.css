@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Detail_info  {
     background-image: url("./lawn-mower.jpg");
     width: 100%;
@@ -28,3 +29,11 @@ p {
 
 
 
+=======
+.btn-group float-left {
+  margin-top: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=Detail.css.map */
+>>>>>>> d8a30b0e6d26f373a92b94e95b2e068e8628bd40
