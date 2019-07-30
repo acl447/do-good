@@ -4,25 +4,21 @@
   height: 1000px;
   background-size: cover;
 }
-.profile_page ul {
+.profile_info ul {
   margin: 150px auto;
-  text-decoration: none;
+  list-style: none;
 }
-.profile_page ul li {
+.profile_info ul li {
   text-align: center;
   font-size: 25px;
-  text-decoration: none;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 5%;
-  max-width: 60%;
-  margin: 50px 200px;
+  padding: 3%;
+  max-width: 35%;
+  margin-top: 75px;
+  margin-left: 500px;
+  float: inherit;
   border-radius: 25px;
-}
-
-.my-profile {
-  padding: 0px;
-  height: 0px;
 }
 
 /*# sourceMappingURL=Profile.css.map */
