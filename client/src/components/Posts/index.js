@@ -18,6 +18,7 @@ class Posts extends Component {
     title: "",
     name: "",
     text: "",
+    zipcode: "",
     posts: []
   };
 
@@ -28,13 +29,13 @@ class Posts extends Component {
   loadPosts = () => {
     API.getPosts()
       .then(res => {
-        this.setState({ posts: res.data, title: "", name: "", text: "" });
-    console.log(res.data);
-  })
+        this.setState({ posts: res.data, title: "", name: "", zipcode: "", text: "" });
+        console.log(res.data);
+      })
       .catch(err => console.log(err));
   };
 
-  
+
 
   // deletePost = id => {
   //   API.deletePost(id)
@@ -59,11 +60,12 @@ class Posts extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.name && this.state.text) {
+    if (this.state.title && this.state.name && this.state.text && this.state.zipcode) {
       API.savePost({
         title: this.state.title,
         name: this.state.name,
-        text: this.state.text
+        text: this.state.text,
+        zipcode: this.state.zipcode
       })
         .then(res => this.loadPosts())
         .catch(err => console.log(err));
@@ -80,65 +82,73 @@ class Posts extends Component {
     return (
 
       <Container fluid>
-      
-      <Row>
-        <Col size="md-4">
-          <form>
-            <Input
-              value={this.state.title}
-              onChange={this.handleInputChange}
-              name="title"
-              placeholder="Enter post title"
-            />
 
-<Input
-              value={this.state.name}
-              onChange={this.handleInputChange}
-              name="name"
-              placeholder="Enter your name"
-            />
-            <TextArea
-            value={this.state.text}
-            onChange={this.handleInputChange}
-            name="text"
-            placeholder="Enter text of post" />
-           
-            <FormBtn
-              disabled={!(this.state.title && this.state.name && this.state.text)}
-              onClick={this.handleFormSubmit}
-            >
-              Submit Post
+        <Row>
+          <Col size="md-4">
+            <form>
+              <Input
+                value={this.state.title}
+                onChange={this.handleInputChange}
+                name="title"
+                placeholder="Enter post title"
+              />
+              <Input
+                value={this.state.name}
+                onChange={this.handleInputChange}
+                name="name"
+                placeholder="Enter your name"
+              />
+              <Input
+                value={this.state.zipcode}
+                onChange={this.handleInputChange}
+                name="zipcode"
+                placeholder="Enter your zipcode"
+              />
+              <TextArea
+                value={this.state.text}
+                onChange={this.handleInputChange}
+                name="text"
+                placeholder="Enter text of post" />
+
+              <FormBtn
+                disabled={!(this.state.title && this.state.name && this.state.zipcode && this.state.text)}
+                onClick={this.handleFormSubmit}
+              >
+                Submit Post
             </FormBtn>
-          </form>
-        </Col>
-        <Col size="md-8">
-          
-          {this.state.posts.length ? (
-            <List>
-              {this.state.posts.map(post => (
-                <ListItem key={post._id}>
-                  <Link to={"/posts/" + post._id}>
-                    <strong>
-                      {post.title} by {post.name}
+            </form>
+          </Col>
+          <Col size="md-8">
 
-                    </strong>
-                  
-                    
-                  </Link>
-                  
-                  
-                  {/* <DeleteBtn onClick={() => this.deletePost(post._id)} /> */}
-                </ListItem>
-              ))}
-            </List>
-          ) : (
-            <h3>No Results to Display</h3>
-          )}
-        </Col>
-      
-      </Row>
-      
-    </Container>
+            {this.state.posts.length ? (
+              <List>
+                {this.state.posts.map(post => (
+                  <ListItem key={post._id}>
+                    <Link to={"/posts/" + post._id}>
+                      <strong>
+                        {post.title} by {post.name} 
+                        <br>
+                        </br>
+                        Zipcode {post.zipcode}
+
+                      </strong>
+
+
+                    </Link>
+
+
+                    {/* <DeleteBtn onClick={() => this.deletePost(post._id)} /> */}
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+                <h3>No Results to Display</h3>
+              )}
+          </Col>
+
+        </Row>
+
+      </Container>
 
 
     );

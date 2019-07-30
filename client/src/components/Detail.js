@@ -42,7 +42,7 @@ class Detail extends Component {
           <Col size="md-12">
 
             <Jumbotron>
-             
+
               <h1>
                 {this.state.post.title} by {this.state.post.name}
               </h1>
