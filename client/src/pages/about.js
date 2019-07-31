@@ -53,7 +53,7 @@ const AboutPage = () => (
                         
                         <main>
                         <h5>
-                        <h1><font color="white">About Us</font></h1>
+                        <h1 className="about_title"><font color="white">About Us</font></h1>
                         Our MISSION is to facilitate Do Good so that they can create the needed processes, opportunities and projects to satisfy 
                         their needs within the framework of our vision and core values. 
                         <br></br>

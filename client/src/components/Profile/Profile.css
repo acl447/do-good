@@ -32,4 +32,9 @@
   border-radius: 25px;
 }
 
+.my-profile {
+  text-shadow: 3px 2px black;
+  color: white;
+}
+
 /*# sourceMappingURL=Profile.css.map */

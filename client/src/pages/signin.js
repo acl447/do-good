@@ -20,7 +20,7 @@ const HomePage = () => (
              
           <div>
           <ul>
-          <h1><font color="white">Do Good</font></h1>
+          <h1 className="title"><font color="white">Do Good</font></h1>
           </ul>
           
         </div>
@@ -29,7 +29,7 @@ const HomePage = () => (
           <div>
           <br></br>
           
-          <h2>Do Good is a community-based service that allows neighbors to 
+          <h2 className="signin_description">Do Good is a community-based service that allows neighbors to 
             give and receive goods and services without any cost or money exchange. Doing good to help each other out without expecting anything in return but gratitude.
           <br></br>Please log in to begin!</h2>
           

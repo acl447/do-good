@@ -45,31 +45,35 @@ class Detail extends Component {
 
             <div className="Detail_info">
 
-            
-           
-            
+              <div className="post_box">
+             
+              <div className="post_info">
 
-            <div className="btn-group float-left">
+                <h1 className="post_title">
+                {this.state.post.title} by {this.state.post.name}
+                </h1>
+                <br></br>
+                <h2 className="post_decription">
+                {this.state.post.text}
+                </h2> 
+
+                <div className="btn-group float-left">
                 <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Reply
-  </button>
+               </button>
                 <div className="dropdown-menu">
                   <Link to="#" className="dropdown-item">Copy and Paste into your Email:</Link>
 
                   <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
                 </div>
               </div>
-             
-              <h1>
-           
-                {this.state.post.title} by {this.state.post.name}
-                
-              </h1>
+              <Link to="/home" className="back">← Back to Home</Link>
+              </div>
               
               {/* <p>Comments:</p> */}
               {/* <p>{this.state.comment.text}</p> */}
 
-            
+              </div>    
 </div>
         
 
@@ -80,8 +84,8 @@ class Detail extends Component {
           <Col size="md-10 md-offset-1">
             <article>
 
-              <p>
-                {this.state.post.text}
+              <p className="post_description"> 
+                {/* {this.state.post.text} */}
               </p>
              
 
