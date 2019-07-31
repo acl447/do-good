@@ -10,13 +10,13 @@ export function Input(props) {
 export function TextArea(props) {
  return (
    <div className="form-group">
-     <textarea className="form-control" rows="20" {...props} />
+     <textarea className="form-control" rows="15" {...props} />
    </div>
  );
 }
 export function FormBtn(props) {
  return (
-   <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+   <button {...props} style={{ marginTop: 300, marginLeft: 123 }} className="btn btn-primary btn-sm">
      {props.children}
    </button>
  );

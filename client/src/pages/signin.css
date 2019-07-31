@@ -2,28 +2,26 @@
   position: absolute;
   top: 0px;
   width: 100%;
-  left: 0
-    
+  left: 0;
 }
-ul {
-    
+
+.signin ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:purple;
-  
+  background-color: purple;
 }
-ul  {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    left: 0
+
+ul {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  left: 0;
 }
 
 li {
   float: left;
-  
 }
 
 li a {
@@ -32,42 +30,49 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  
 }
 
 li a:hover {
   background-color: #111;
-
-
-  
 }
 
 .signin {
-    background-image: url("hands.png");
-    background-size:cover;
-    background-position: center;
-    background-color: #cccccc;
-   
-  
-   }
-h1 {
-    margin-left: 40%;
+  background-image: url("hands.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+  height: 1000px;
+}
 
-  
+.title {
+  text-shadow: 3px 2px black;
+  margin-left: 42%;
 }
-h2 {
-  background: rgba(255,255,255,0.8);
-    padding: 10%;
-    max-width: 60%;
-    margin: 0 auto;
-    border-radius: 25px;
-    margin-top: 56px;
+
+.signin_description {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 7%;
+  max-width: 60%;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-top: 75px;
+  box-shadow: 5px 10px #888888;
 }
+
 .app-container {
   margin-top: 3.5%;
   height: 100%;
   width: 100%;
 }
 
+.btn {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  margin: 175px 150px;
+  top: 50%;
+  left: 50%;
+}
 
-
+/*# sourceMappingURL=signin.css.map */

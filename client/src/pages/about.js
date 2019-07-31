@@ -45,16 +45,15 @@ const AboutPage = () => (
                         {/* <SideNav />                    {sideNav} */}
                         {/* <NavTabs href="/about" /> */}
                         {/* <Logout /> */}
-                        <div class="about">
+                        <div className="about_info">
 
                         </div>
                         <br>
                         </br>
                         
-                        {/* <Profile /> */}
-                        <main style={{marginTop: "5px"}}>
+                        <main>
                         <h5>
-                        <h1>About Page</h1>
+                        <h1 className="about_title"><font color="white">About Us</font></h1>
                         Our MISSION is to facilitate Do Good so that they can create the needed processes, opportunities and projects to satisfy 
                         their needs within the framework of our vision and core values. 
                         <br></br>

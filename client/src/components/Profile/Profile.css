@@ -1,12 +1,40 @@
-.profile_page ul {
-  margin: 150px auto;
+.profile_page {
+  background-image: url("./Do-Well.jpg");
+  height: 1000px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.profile_page ul li {
+.profile_page .my-profile {
+  margin-left: 650px;
+}
+
+.profile_info ul {
+  list-style: none;
+  position: static;
+}
+.profile_info ul .user-img {
+  width: 259px;
+  margin-top: 1%;
+  margin-left: 39%;
+}
+.profile_info ul li {
+  text-align: center;
   font-size: 25px;
-  text-decoration: none;
-  padding: 10px;
-  flex-direction: row;
-  background: white;
+  width: 100%;
+  color: white;
+  background-color: rgba(44, 40, 40, 0.8);
+  padding: 3%;
+  max-width: 35%;
+  margin-top: 55px;
+  margin-left: 125px;
+  border-radius: 25px;
+}
+
+.my-profile {
+  text-shadow: 3px 2px black;
+  color: white;
 }
 
 /*# sourceMappingURL=Profile.css.map */

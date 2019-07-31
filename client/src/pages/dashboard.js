@@ -3,9 +3,7 @@ import { Redirect } from "react-router-dom";
 import NavTabs from "../components/Navbar/NavTabs";
 import { AuthConsumer } from "../authContext";
 import Can from "../components/Can";
-// import Logout from "../components/Logout";
 import Profile from "../components/Profile/Profile";
-import "./dashboard.css";
 const DashboardPage = () => (
   <AuthConsumer>
     {({ user }) => (
@@ -13,11 +11,10 @@ const DashboardPage = () => (
         role={user.role}
         perform="dashboard-page:visit"
         yes={() => (
-          <div>
+          <div className="profile_page">
             <NavTabs />
             <br></br>
-            <h1>My Profile</h1>
-            {/* <Logout /> */}
+            <h1 className="my-profile">My Profile</h1>
             <Profile />
           </div>
         )}

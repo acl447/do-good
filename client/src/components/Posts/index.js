@@ -18,6 +18,7 @@ class Posts extends Component {
     title: "",
     name: "",
     text: "",
+    zipcode: "",
     posts: []
   };
 
@@ -28,13 +29,13 @@ class Posts extends Component {
   loadPosts = () => {
     API.getPosts()
       .then(res => {
-        this.setState({ posts: res.data, title: "", name: "", text: "" });
-    console.log(res.data);
-  })
+        this.setState({ posts: res.data, title: "", name: "", zipcode: "", text: "" });
+        console.log(res.data);
+      })
       .catch(err => console.log(err));
   };
 
-  
+
 
   // deletePost = id => {
   //   API.deletePost(id)
@@ -59,11 +60,12 @@ class Posts extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.name && this.state.text) {
+    if (this.state.title && this.state.name && this.state.text && this.state.zipcode) {
       API.savePost({
         title: this.state.title,
         name: this.state.name,
-        text: this.state.text
+        text: this.state.text,
+        zipcode: this.state.zipcode
       })
         .then(res => this.loadPosts())
         .catch(err => console.log(err));
@@ -83,43 +85,55 @@ class Posts extends Component {
       
       <Row>
         <Col size="md-4">
-          <form>
+        <h1 className="new_post mt-2">Add A New Post</h1>
+          <form className="pb-5">
             <Input
               value={this.state.title}
               onChange={this.handleInputChange}
               name="title"
-              placeholder="Enter post title"
+              placeholder="Type of Item"
             />
 
 <Input
               value={this.state.name}
               onChange={this.handleInputChange}
               name="name"
-              placeholder="Enter your name"
+              placeholder="Your Name Here"
+            />
+            <Input
+              value={this.state.zipcode}
+              onChange={this.handleInputChange}
+              name="zipcode"
+              placeholder="Your Zipcode Here"
             />
             <TextArea
             value={this.state.text}
             onChange={this.handleInputChange}
             name="text"
-            placeholder="Enter text of post" />
+            placeholder="Enter Description of Needed Item or Item to be Gifted" />
            
             <FormBtn
               disabled={!(this.state.title && this.state.name && this.state.text)}
               onClick={this.handleFormSubmit}
             >
-              Submit Post
+              Submit
             </FormBtn>
           </form>
         </Col>
-        <Col size="md-8">
-          
+        <Col size="md-3"></Col>
+        <Col size="md-5">
+        
           {this.state.posts.length ? (
             <List>
+              <h1 className="user_post mt-2">Posts</h1>
               {this.state.posts.map(post => (
                 <ListItem key={post._id}>
                   <Link to={"/posts/" + post._id}>
                     <strong>
                       {post.title} by {post.name}
+                      <br/>
+                      <br />
+                      {post.zipcode}
 
                     </strong>
                   

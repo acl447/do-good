@@ -1,0 +1,26 @@
+.Detail_info {
+  background-image: url("./lawn-mower.jpg");
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+}
+.Detail_info .post_box .post_info {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5%;
+  max-width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  border-radius: 25px;
+  border-radius: 25px;
+  box-shadow: 5px 10px #888888;
+}
+.Detail_info .post_box .post_info .btn-group float-left {
+  margin: 0;
+  padding-left: 5%;
+}
+.Detail_info .post_box .post_info .back {
+  margin: 0;
+  padding-left: 10%;
+}
+
+/*# sourceMappingURL=Detail.css.map */
