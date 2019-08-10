@@ -12,7 +12,7 @@ class Detail extends Component {
     post: {},
     author: "",
     message: ""
-    // comment: {},
+  
 
   };
 
@@ -23,21 +23,16 @@ class Detail extends Component {
     .catch(err => console.log(err));
 
 
-  }
+  };
 
   componentDidMount() {
 
     console.log(this.props.postId);
 
-    // console.log(this.props.commentId);
 
     this.loadPost();
 
 
-
-    // API.getComment(this.props.commentId)
-    //   .then(res => this.setState({ comment: res.data}))
-    //   .catch(err => console.log(err));
   };
 
   showComments() {
@@ -123,21 +118,9 @@ class Detail extends Component {
                     {this.state.post.text}
                   </h2>
 
-                  {/* <div className="btn-group float-left">
-                <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Reply
-               </button>
-                <div className="dropdown-menu">
-                  <Link to="#" className="dropdown-item">Copy and Paste into your Email:</Link>
-
-                  <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
-                </div>
-              </div> */}
+                 
                   <Link to="/home" className="back">← Back to Home</Link>
                 </div>
-
-                {/* <p>Comments:</p> */}
-                {/* <p>{this.state.comment.text}</p> */}
 
               </div>
 

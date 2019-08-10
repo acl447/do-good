@@ -126,7 +126,7 @@ class Posts extends Component {
           {this.state.posts.length ? (
             <List>
               <h1 className="user_post mt-2">Posts</h1>
-              {this.state.posts.map(post => (
+              {this.state.posts.slice(0).reverse().map(post => (
                 <ListItem key={post._id}>
                   <Link to={"/posts/" + post._id}>
                     <strong>

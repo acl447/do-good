@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const postRoutes = require("./posts");
 const userRoutes = require("./users");
- const zipRoutes = require("./zipcodes");
-// const commentRoutes = require("./comments");
+const zipRoutes = require("./zipcodes");
+
 
 
 
@@ -15,7 +15,6 @@ router.use("/users", userRoutes);
 //Zipcodes routes
 router.use ("/zipcodes", zipRoutes);
 
-//Comment routes
-// router.use("/comments", commentRoutes);
+
 
 module.exports = router;
