@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "./Grid";
 import API from "../utils/API";
+import { Input, TextArea, FormBtn } from "./Form";
 import "./Detail.css"
 
 
@@ -9,13 +10,20 @@ import "./Detail.css"
 class Detail extends Component {
   state = {
     post: {},
+    author: "",
+    message: ""
     // comment: {},
-    
+
   };
 
+  loadPost() {
+
+    API.getPost(this.props.postId)
+    .then(res => this.setState({ post: res.data }))
+    .catch(err => console.log(err));
 
 
-
+  }
 
   componentDidMount() {
 
@@ -23,9 +31,7 @@ class Detail extends Component {
 
     // console.log(this.props.commentId);
 
-    API.getPost(this.props.postId)
-      .then(res => this.setState({ post: res.data }))
-      .catch(err => console.log(err));
+    this.loadPost();
 
 
 
@@ -34,30 +40,90 @@ class Detail extends Component {
     //   .catch(err => console.log(err));
   };
 
+  showComments() {
+
+    if (this.state.post.comments) {
+
+      return this.state.post.comments.map(function (comment, i) {
+
+        return <Col size="md-6" key={i}>
+
+          <br />
+
+          <h5>{comment.author}</h5>
+
+          <p>{comment.message}</p>
+
+        </Col>
+       
+      })
+    }
+
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.author && this.state.message) {
+
+      let newComment = {author: this.state.author, message: this.state.message};
+
+      console.log(newComment);
+
+      this.state.post.comments.push(newComment);
+
+      console.log("post title", this.state.post.title);
+
+      console.log("name", this.state.post.name);
+
+      console.log("text", this.state.post.text);
+
+      console.log("zipcode", this.state.post.zipcode);
+      
+      console.log("comments", this.state.post.comments);
+
+      API.updatePost(this.props.postId, this.state.post.comments)
+        .then(res => this.loadPost())
+        .catch(err => console.log(err));
+
+    }
+
+  };
+
+
+
+
+
   render() {
     return (
       <Container fluid>
-        
- 
+
+
         <Row>
           <Col size="md-12">
-            
+
 
             <div className="Detail_info">
 
               <div className="post_box">
-             
-              <div className="post_info">
 
-                <h1 className="post_title">
-                {this.state.post.title} by {this.state.post.name}
-                </h1>
-                <br></br>
-                <h2 className="post_decription">
-                {this.state.post.text}
-                </h2> 
+                <div className="post_info">
 
-                <div className="btn-group float-left">
+                  <h1 className="post_title">
+                    {this.state.post.title} by {this.state.post.name}
+                  </h1>
+                  <br></br>
+                  <h2 className="post_decription">
+                    {this.state.post.text}
+                  </h2>
+
+                  {/* <div className="btn-group float-left">
                 <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Reply
                </button>
@@ -66,37 +132,63 @@ class Detail extends Component {
 
                   <Link to="#" className="dropdown-item">345khksfghk425kjh@dogood.org</Link>
                 </div>
-              </div>
-              <Link to="/home" className="back">← Back to Home</Link>
-              </div>
-              
-              {/* <p>Comments:</p> */}
-              {/* <p>{this.state.comment.text}</p> */}
+              </div> */}
+                  <Link to="/home" className="back">← Back to Home</Link>
+                </div>
 
-              </div>    
-</div>
-        
+                {/* <p>Comments:</p> */}
+                {/* <p>{this.state.comment.text}</p> */}
 
-            
+              </div>
+
+
+            </div>
+
+
+
           </Col>
         </Row>
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
 
-              <p className="post_description"> 
+              <p className="post_description">
                 {/* {this.state.post.text} */}
               </p>
-             
+
 
 
             </article>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <Col size="md-2">
             <Link to="/home">← Back to Home</Link>
           </Col>
+        </Row> */}
+        <Row fluid>
+          <Col size="md-12">
+            <h2>Add A Comment</h2>
+            <form>
+              <Input placeholder="Your name"
+               onChange={this.handleInputChange}
+               value={this.state.author}
+               name="author"
+               ></Input>
+              <TextArea value={this.state.message}
+            onChange={this.handleInputChange}
+            name="message" placeholder="Message"></TextArea>
+              <FormBtn disabled={!(this.state.author && this.state.message)} onClick={this.handleFormSubmit}>Submit</FormBtn>
+            </form>
+          </Col>
+
+        </Row>
+        
+
+        <Row fluid className="mt-5">
+          {this.showComments()}
+
+
         </Row>
       </Container>
     );

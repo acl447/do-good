@@ -15,7 +15,7 @@ const HomePage = () => (
         <Redirect to="/home" />
       ) : (
       
-        <div class="signin">
+        <div className="signin">
            <header>
              
           <div>

@@ -35,6 +35,15 @@ export default {
         console.log(postData);
         return axios.post("/api/posts", postData);
     },
+
+     // Updates a post with the given ID
+     updatePost: function (id, commentData) {
+         console.log("updatePost called with id", id);
+        return axios.put("/api/posts/" + id, {
+            comments: commentData
+
+        });
+    },
     // Gets all comments
     // getComments: function () {
     //     return axios.get("/api/comments");

@@ -13,8 +13,8 @@ const postSeed = [
     title: "Socks",
     name: "Maxine A.",
     zipcode:"85234",
-    text: "I have 12 pairs of socks to give away that have never been worn! They're white, adult men's, size medium. Email me if interested!"
-    
+    text: "I have 12 pairs of socks to give away that have never been worn! They're white, adult men's, size medium. Email me if interested!",
+    comments: [{author: "Ally"}, {message: "I want those socks! Email me! allyl@dogood.org"}]
 
     //date: new Date(Date.now())
   },
@@ -24,8 +24,8 @@ const postSeed = [
     title: "Lawn Mower",
     name: "Charlie B.",
     zipcode:"85296",
-    text: "PowerSmart DB2194P 21 3-in-1 160cc Gas Push Lawn Mower in great condition. Black and red. Email me if interested. "
-
+    text: "PowerSmart DB2194P 21 3-in-1 160cc Gas Push Lawn Mower in great condition. Black and red. Email me if interested. ",
+    comments: [{author: "Brian"}, {message: "I want it! Email me! brianl@dogood.org"}]
 
     //date: new Date(Date.now())
   },
@@ -35,8 +35,8 @@ const postSeed = [
     title: "Freshly Made Banana Bread",
     name: "Andrea D.",
     zipcode:"85233",
-    text: "I have 6 loaves of fresh banana bread left over from a bake sale - just made this morning with my own family recipe! Not vegan, not gluten-free. Hurry up before they're gone! Email me!"
-   
+    text: "I have 6 loaves of fresh banana bread left over from a bake sale - just made this morning with my own family recipe! Not vegan, not gluten-free. Hurry up before they're gone! Email me!",
+    comments: [{author: "Gina"}, {message: "I want that banana bread! Email me! ginal@dogood.org"}]
 
     //date: new Date(Date.now())
   }
