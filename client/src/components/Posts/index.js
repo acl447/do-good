@@ -19,6 +19,7 @@ class Posts extends Component {
     name: "",
     text: "",
     zipcode: "",
+    imageLink: "",
     posts: []
   };
 
@@ -29,7 +30,7 @@ class Posts extends Component {
   loadPosts = () => {
     API.getPosts()
       .then(res => {
-        this.setState({ posts: res.data, title: "", name: "", zipcode: "", text: "" });
+        this.setState({ posts: res.data, title: "", name: "", zipcode: "", text: "", imageLink: "" });
         console.log(res.data);
       })
       .catch(err => console.log(err));
@@ -64,6 +65,7 @@ class Posts extends Component {
       API.savePost({
         title: this.state.title,
         name: this.state.name,
+        imageLink: this.state.imageLink,
         text: this.state.text,
         zipcode: this.state.zipcode
       })
@@ -105,6 +107,12 @@ class Posts extends Component {
               onChange={this.handleInputChange}
               name="zipcode"
               placeholder="Your Zipcode Here"
+            />
+            <Input
+              value={this.state.imageLink}
+              onChange={this.handleInputChange}
+              name="imageLink"
+              placeholder="Enter Link to Photo (optional)"
             />
             <TextArea
             value={this.state.text}

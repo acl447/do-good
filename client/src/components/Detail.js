@@ -79,6 +79,8 @@ class Detail extends Component {
 
       console.log("text", this.state.post.text);
 
+      console.log("link to image", this.state.post.imageLink);
+
       console.log("zipcode", this.state.post.zipcode);
       
       console.log("comments", this.state.post.comments);
@@ -113,6 +115,7 @@ class Detail extends Component {
                   <h1 className="post_title">
                     {this.state.post.title} by {this.state.post.name}
                   </h1>
+                  <img src={this.state.post.imageLink} alt="item offered or needed"/>
                   <br></br>
                   <h2 className="post_decription">
                     {this.state.post.text}
