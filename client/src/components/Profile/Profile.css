@@ -1,14 +1,13 @@
 .profile_page {
   background-image: url("./Do-Well.jpg");
-  height: 1000px;
+  height: 1600px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.profile_page .my-profile {
-  margin-left: 650px;
 }
 
 .profile_info ul {
@@ -18,25 +17,67 @@
 
 .profile_info ul .user-img {
   width: 259px;
-  margin-top: 1%;
-  margin-left: 39%;
 }
 
 .profile_info ul li {
   text-align: center;
-  font-size: 25px;
   width: 100%;
   color: white;
   background-color: rgba(44, 40, 40, 0.8);
-  padding: 3%;
-  max-width: 35%;
-  margin-top: 55px;
-  margin-left: 125px;
   border-radius: 25px;
 }
 
 .my-profile {
   text-shadow: 3px 2px black;
   color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1100px) {
+  .user-img {
+    margin-top: 1%;
+    margin-left: 39%;
+  }
+  .profile_info ul li {
+    padding: 3%;
+    max-width: 35%;
+    margin-top: 55px;
+    margin-left: 125px;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .my-profile {
+    margin-top: 20px;
+  }
+  .profile_info ul {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .profile_info ul li {
+    padding: 1%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 600px) {
+  .profile_info ul {
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .profile_info ul li {
+    margin-top: 20px;
+    padding: 1%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 /*# sourceMappingURL=Profile.css.map */

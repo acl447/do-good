@@ -9,7 +9,7 @@ const Profile = () => (
 
         <div className="profile_info">
         <ul>
-          <img className="user-img" src={user.picture} alt="user profile img"/>
+          <img className="user-img img-responsive mx-auto d-block" src={user.picture} alt="user profile img"/>
           <Row>
           <li>My Name: {user.name}</li>
           <li>ID: {user.id}</li>
