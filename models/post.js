@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const postSchema = new Schema({
   title: { type: String, required: true },
   name: { type: String, required: true },
+  imageLink: { type: String, required: false},
   text: { type: String, required: true },
   zipcode: { type: String, required: true },
   comments: [{ author: { type: String, required: true }, message: { type: String, required: true } }]
