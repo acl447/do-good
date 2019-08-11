@@ -1,5 +1,4 @@
 import React from "react";
-import "./Login.css";
 import { AuthConsumer } from "../authContext";
 
 const Login = () => (
