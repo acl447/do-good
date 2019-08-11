@@ -1,4 +1,6 @@
-.header {
+
+
+header {
     position: absolute;
     top: 0px;
     width: 100%;
@@ -54,25 +56,28 @@
       background-repeat: no-repeat;
       background-size:cover;
       background-color: #cccccc;
-      height: 1000px; 
+      
      
      }
   
      .title {
       
       text-shadow: 3px 2px black;
-      margin-left: 42%;
+      
       
       
   }
   .signin_description {
     background: rgba(255,255,255,0.8);
       padding: 7%;
+      padding-bottom: 40%;
       max-width: 60%;
       margin: 0 auto;
       border-radius: 25px;
       margin-top: 75px;
       box-shadow: 5px 10px #888888;
+      text-align: center;
+      
   }
   .app-container {
     margin-top: 3.5%;
@@ -84,7 +89,59 @@
     position: absolute;  
     height:50px; 
     width:100px; 
-    margin: 175px 150px; 
-    top:50%; 
-    left:50%;;
+   
+  }
+
+  @media only screen and (min-width: 600px) {
+
+    .btn {
+
+    // margin: 175px 150px; 
+    top: 77%; 
+    left:46%;
+
+
+    }
+
+    .signin {
+
+      height: 1100px;
+    }
+
+    .title {
+
+      margin-left: 42%;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .signin_description {
+
+      font-size: 18px;
+
+    }
+
+    .btn {
+      top: 32rem;
+      left: 39%;
+      width: 80px;
+      height: 40px;
+      
+    }
+
+    .signin {
+
+      height: 830px;
+    }
+
+    .title {
+
+      margin-left: 29%;
+    }
+    
+
+
   }
