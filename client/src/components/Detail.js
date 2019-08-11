@@ -115,14 +115,14 @@ class Detail extends Component {
                   <h1 className="post_title">
                     {this.state.post.title} by {this.state.post.name}
                   </h1>
-                  <img src={this.state.post.imageLink} alt="item offered or needed"/>
+                  <img className="postImage" src={this.state.post.imageLink} alt="item offered or needed"/>
                   <br></br>
                   <h2 className="post_decription">
                     {this.state.post.text}
                   </h2>
 
                  
-                  <Link to="/home" className="back">← Back to Home</Link>
+                  {/* <Link to="/home" className="back">← Back to Home</Link> */}
                 </div>
 
               </div>
@@ -147,11 +147,6 @@ class Detail extends Component {
             </article>
           </Col>
         </Row>
-        {/* <Row>
-          <Col size="md-2">
-            <Link to="/home">← Back to Home</Link>
-          </Col>
-        </Row> */}
         <Row fluid>
           <Col size="md-12">
             <h2>Add A Comment</h2>
@@ -172,10 +167,16 @@ class Detail extends Component {
         
 
         <Row fluid className="mt-5">
+          <Col size="md-12">
           {this.showComments()}
 
-
+          </Col>
         </Row>
+        <Row>
+        <Col size="md-12">
+          <Link to="/home">← Back to Home</Link>
+        </Col>
+      </Row>
       </Container>
     );
   }

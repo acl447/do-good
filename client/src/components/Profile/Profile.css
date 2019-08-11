@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .profile_page .my-profile {
   margin-left: 650px;
 }
@@ -14,11 +15,13 @@
   list-style: none;
   position: static;
 }
+
 .profile_info ul .user-img {
   width: 259px;
   margin-top: 1%;
   margin-left: 39%;
 }
+
 .profile_info ul li {
   text-align: center;
   font-size: 25px;
@@ -36,5 +39,4 @@
   text-shadow: 3px 2px black;
   color: white;
 }
-
 /*# sourceMappingURL=Profile.css.map */
