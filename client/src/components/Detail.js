@@ -93,6 +93,18 @@ class Detail extends Component {
 
   };
 
+  showImage() {
+
+
+    if (this.state.post.imageLink) {
+
+      return (
+
+        <img className="postImage" src={this.state.post.imageLink} alt="item needed or offered" />
+      )
+    }
+  };
+
 
 
 
@@ -115,7 +127,7 @@ class Detail extends Component {
                   <h1 className="post_title">
                     {this.state.post.title} by {this.state.post.name}
                   </h1>
-                  <img className="postImage" src={this.state.post.imageLink} alt="item offered or needed"/>
+                 {this.showImage()}
                   <br></br>
                   <h2 className="post_decription">
                     {this.state.post.text}
