@@ -29,12 +29,15 @@ const HomePage = () => (
           <div>
           <br></br>
           
-          <h2 className="signin_description">Do Good is a community-based service that allows neighbors to 
+          <div className="signin_description"><h3 className="pb-3">Do Good is a community-based service that allows neighbors to 
             give and receive goods and services without any cost or money exchange. Doing good to help each other out without expecting anything in return but gratitude.
-          <br></br>Please log in to begin!</h2>
+          <br></br>Please log in to begin!</h3>
           
-
+          
+           
           <Login />
+         
+        </div>
         </div>
         </div>
       )
