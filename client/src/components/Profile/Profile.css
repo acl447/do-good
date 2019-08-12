@@ -2,7 +2,6 @@
   background-image: url("./Do-Well.jpg");
   height: 1600px;
   overflow-x: hidden;
-  overflow-y: scroll;
   position: relative;
   /* Center and scale the image nicely */
   background-position: center;
