@@ -46,12 +46,12 @@ li a:hover {
 
 .title {
   text-shadow: 3px 2px black;
+  text-align: center;
 }
 
 .signin_description {
   background: rgba(255, 255, 255, 0.8);
   padding: 7%;
-  padding-bottom: 40%;
   max-width: 60%;
   margin: 0 auto;
   border-radius: 25px;
@@ -61,14 +61,7 @@ li a:hover {
   text-align: center;
 }
 
-.app-container {
-  margin-top: 3.5%;
-  height: 100%;
-  width: 100%;
-}
-
 .btn {
-  position: absolute;
   height: 50px;
   width: 100px;
 }
@@ -76,31 +69,19 @@ li a:hover {
 @media only screen and (min-width: 600px) {
   .btn {
     top: 77%;
-    left: 46%;
   }
   .signin {
     height: 1100px;
   }
-  .title {
-    margin-left: 42%;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-  .signin_description {
-    font-size: 18px;
-  }
   .btn {
-    top: 32rem;
-    left: 39%;
     width: 80px;
     height: 40px;
   }
   .signin {
-    height: 830px;
-  }
-  .title {
-    margin-left: 29%;
+    height: 1050px;
   }
 }
 /*# sourceMappingURL=signin.css.map */
