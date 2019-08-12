@@ -87,7 +87,7 @@ class Posts extends Component {
       
       <Row>
         <Col size="md-4">
-        <h1 className="new_post mt-4">Add A New Post</h1>
+        <h1 className="new_post mt-5">Add A New Post</h1>
           <form className="pb-5">
             <Input
               value={this.state.title}
@@ -133,7 +133,7 @@ class Posts extends Component {
         
           {this.state.posts.length ? (
             <List>
-              <h1 className="user_post mt-4">Posts</h1>
+              <h1 className="user_post mt-5">Posts</h1>
               {this.state.posts.slice(0).reverse().map(post => (
                 <ListItem key={post._id}>
                   <Link to={"/posts/" + post._id}>
