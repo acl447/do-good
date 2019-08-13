@@ -28,12 +28,12 @@
 
     .btn {
 
-        margin-top: 145px !important;
-        margin-left: 145px !important;
+        margin-top: 1px !important;
+        margin-left: 355px !important;
     }
 }
 
-@media only screen and (min-width: 360px) and (max-width: 600px) {
+@media only screen and (min-width: 375px) and (max-width: 600px) {
 
 
     .new_post,
@@ -52,8 +52,8 @@
 
     .btn {
 
-        margin-top: 190px !important;
-        margin-left: 9.5rem !important;
+        margin-top: 10px !important;
+        margin-left: 330px !important;
     }
 
 }
@@ -79,17 +79,26 @@
 
     .btn {
 
-        margin-top: 145px !important;
-        margin-left: 30px !important;
+        margin-top: 10px !important;
+        margin-left: 115px !important;
     }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (min-width: 360px) and (max-width: 375px) {
+
+    .btn {
+
+        margin-top: 10px !important;
+        margin-left: 150px !important;
+    }
+}
+
+@media only screen and (max-width: 325px) {
 
 .btn {
 
-    margin-top: 190px !important;
-    margin-left: 7.5rem !important;
+    margin-top: 10px !important;
+    margin-left: 235px !important;
 }
 
 .new_post,
@@ -104,5 +113,29 @@
     height: 850px;
     background-position: -270px 0;
 }
+
+}
+
+@media only screen and (min-width: 325px) and (max-width: 375px) {
+
+    .btn {
+
+        margin-top: 10px !important;
+        margin-left: 275px !important;
+    }
+    
+    .new_post,
+    .user_post {
+    
+        color: white;
+        text-shadow: 3px 2px black;
+    }
+    
+    .home {
+    
+        height: 850px;
+        background-position: -270px 0;
+    }
+    
 
 }
