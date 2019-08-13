@@ -159,8 +159,8 @@ class Detail extends Component {
             </article>
           </Col>
         </Row>
-        <Row fluid>
-          <Col size="md-12">
+        <Row className="mt-5">
+          <Col size="md-6">
             <h2>Add A Comment</h2>
             <form>
               <Input placeholder="Your name"
@@ -174,14 +174,12 @@ class Detail extends Component {
               <FormBtn disabled={!(this.state.author && this.state.message)} onClick={this.handleFormSubmit}>Submit</FormBtn>
             </form>
           </Col>
-
-        </Row>
         
-
-        <Row fluid className="mt-5">
-          <Col size="md-12">
+          <Col size="md-6">
+            <h2>Comments</h2>
+            <div>
           {this.showComments()}
-
+          </div>
           </Col>
         </Row>
         <Row>
