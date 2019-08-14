@@ -133,7 +133,7 @@ class Detail extends Component {
                   </h1>
                   {this.showImage()}
                   <br></br>
-                  <h2 className="post_decription">
+                  <h2 className="post_description">
                     {this.state.post.text}
                   </h2>
 
@@ -192,7 +192,7 @@ class Detail extends Component {
         <Row>
          
           <Col size="md-12">
-            <Link to="/home" className="float-right mr-5 mb-5">← Back to Home</Link>
+            <Link to="/home" className="float-right mr-5 mb-5 mt-5">← Back to Home</Link>
           </Col>
          
         </Row>
