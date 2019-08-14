@@ -25,7 +25,7 @@ class DetailPage extends Component {
                         role={user.role}
                         perform="detail-page:visit"
                         yes={() => (
-                            <div>
+                            <div className="detail-container">
                                 <NavTabs />
                                 {/* <Logout /> */}
                                 

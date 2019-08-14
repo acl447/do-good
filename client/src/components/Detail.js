@@ -12,15 +12,15 @@ class Detail extends Component {
     post: {},
     author: "",
     message: ""
-  
+
 
   };
 
   loadPost() {
 
     API.getPost(this.props.postId)
-    .then(res => this.setState({ post: res.data }))
-    .catch(err => console.log(err));
+      .then(res => this.setState({ post: res.data }))
+      .catch(err => console.log(err));
 
 
   };
@@ -44,13 +44,17 @@ class Detail extends Component {
         return <Col size="md-6" key={i}>
 
           <br />
+          <div className="comment_box">
 
-          <h5>{comment.author}</h5>
+            <h5 className="author">{comment.author}</h5>
 
-          <p>{comment.message}</p>
+            <p>{comment.message}</p>
+
+          </div>
+    
 
         </Col>
-       
+
       })
     }
 
@@ -67,7 +71,7 @@ class Detail extends Component {
     event.preventDefault();
     if (this.state.author && this.state.message) {
 
-      let newComment = {author: this.state.author, message: this.state.message};
+      let newComment = { author: this.state.author, message: this.state.message };
 
       console.log(newComment);
 
@@ -82,7 +86,7 @@ class Detail extends Component {
       console.log("link to image", this.state.post.imageLink);
 
       console.log("zipcode", this.state.post.zipcode);
-      
+
       console.log("comments", this.state.post.comments);
 
       API.updatePost(this.props.postId, this.state.post.comments)
@@ -118,7 +122,7 @@ class Detail extends Component {
           <Col size="md-12">
 
 
-            <div className="Detail_info">
+            <div className="Detail_info mt-5">
 
               <div className="post_box">
 
@@ -127,13 +131,13 @@ class Detail extends Component {
                   <h1 className="post_title">
                     {this.state.post.title} by {this.state.post.name}
                   </h1>
-                 {this.showImage()}
+                  {this.showImage()}
                   <br></br>
                   <h2 className="post_decription">
                     {this.state.post.text}
                   </h2>
 
-                 
+
                   {/* <Link to="/home" className="back">← Back to Home</Link> */}
                 </div>
 
@@ -159,36 +163,39 @@ class Detail extends Component {
             </article>
           </Col>
         </Row>
-        <Row fluid>
-          <Col size="md-12">
-            <h2>Add A Comment</h2>
+        <Row className="mt-5">
+          
+          <Col size="md-4">
+            <h2 className="add-comment mt-5">Add A Comment</h2>
             <form>
               <Input placeholder="Your name"
-               onChange={this.handleInputChange}
-               value={this.state.author}
-               name="author"
-               ></Input>
+                onChange={this.handleInputChange}
+                value={this.state.author}
+                name="author"
+              ></Input>
               <TextArea value={this.state.message}
-            onChange={this.handleInputChange}
-            name="message" placeholder="Message"></TextArea>
+                onChange={this.handleInputChange}
+                name="message" placeholder="Message"></TextArea>
               <FormBtn disabled={!(this.state.author && this.state.message)} onClick={this.handleFormSubmit}>Submit</FormBtn>
             </form>
           </Col>
+         
 
-        </Row>
-        
-
-        <Row fluid className="mt-5">
-          <Col size="md-12">
-          {this.showComments()}
-
+          <Col size="md-8">
+            <h2 className="comments mt-5">Comments</h2>
+            <div>
+              {this.showComments()}
+            </div>
           </Col>
+        
         </Row>
         <Row>
-        <Col size="md-12">
-          <Link to="/home">← Back to Home</Link>
-        </Col>
-      </Row>
+         
+          <Col size="md-12">
+            <Link to="/home" className="float-right mr-5 mb-5">← Back to Home</Link>
+          </Col>
+         
+        </Row>
       </Container>
     );
   }

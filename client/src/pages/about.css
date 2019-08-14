@@ -1,16 +1,14 @@
 .about_title {
-  text-shadow: 3px 2px black;
   text-align: center;
 }
 
 main {
-  background-image: url("Helping.jpg");
-  background-size: cover;
+  background-image: url("pow-star.png");
   background-position: center;
   background-color: #cccccc;
 }
 
-h5, h6 {
+.about, .developers {
   background: rgba(255, 255, 255, 0.8);
   padding: 2%;
   max-width: 60%;
