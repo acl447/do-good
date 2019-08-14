@@ -1,11 +1,12 @@
 
 
 .Detail_info  {
-    background-image: url("./lawn-mower.jpg");
+    background-color: lightcyan;
     width: 100%;
     height: 1000px;
     background-size: cover;
-
+   
+  
 
     .post_box {
 
@@ -20,13 +21,7 @@
               border-radius: 25px;
               box-shadow: 5px 10px #888888;
         
-              .post_title{
-        
-        
-              }
-              .post_description {
-           
-            }
+            
 
             .postImage {
 
@@ -46,7 +41,16 @@
               }
           }
         
-
+        
 
     }
 
+    .comment_box {
+      background: rgba(255,255,255,0.8);
+      padding: 2%;
+      max-width: 60%;
+      margin: 0 auto;
+      border-radius: 25px;
+      margin-top: 56px;
+      box-shadow: 5px 10px #888888;
+    }

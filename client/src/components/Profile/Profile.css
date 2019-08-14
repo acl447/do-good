@@ -13,11 +13,9 @@
   list-style: none;
   position: static;
 }
-
 .profile_info ul .user-img {
   width: 259px;
 }
-
 .profile_info ul li {
   text-align: center;
   width: 100%;
@@ -37,6 +35,7 @@
     margin-top: 1%;
     margin-left: 39%;
   }
+
   .profile_info ul li {
     padding: 3%;
     max-width: 35%;
@@ -45,11 +44,11 @@
     font-size: 25px;
   }
 }
-
 @media only screen and (max-width: 600px) {
   .my-profile {
     margin-top: 20px;
   }
+
   .profile_info ul {
     margin-left: 0;
     margin-right: 0;
@@ -64,7 +63,6 @@
     font-size: 15px;
   }
 }
-
 @media screen and (max-width: 1100px) and (min-width: 600px) {
   .profile_info ul {
     margin-left: 0;
@@ -79,4 +77,5 @@
     margin-right: 20px;
   }
 }
+
 /*# sourceMappingURL=Profile.css.map */

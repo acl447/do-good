@@ -54,7 +54,7 @@ const AboutPage = () => (
                         <main>
 
                             <h1 className="about_title mt-5 pt-5 mb-2 pb-2"><font color="white">About Us</font></h1>
-                            <h5>Our MISSION is to facilitate Do Good so that they can create the needed processes, opportunities and projects to satisfy
+                            <h5 className="about">Our MISSION is to facilitate Do Good so that they can create the needed processes, opportunities and projects to satisfy
                             their needs within the framework of our vision and core values.
                         <br></br>
                                 <br></br>
@@ -65,7 +65,7 @@ const AboutPage = () => (
                                 finding orders for girl scout cookies, or even just letting the neighborhood know you're having a pool party next week.
                         In the hectic world of today what we really need is to Do Good.</h5>
                             <br></br>
-                            <h6> The Developers
+                            <h6 className="developers"> The Developers
 <br></br>
                                 Jill Veltrie
 <br></br>
