@@ -115,7 +115,7 @@ class Detail extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container id="container" fluid>
 
 
         <Row>
