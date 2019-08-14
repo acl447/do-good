@@ -15,7 +15,7 @@ const postSeed = [
     zipcode:"85234",
     imageLink: "https://cdn.shopify.com/s/files/1/0015/8099/0516/products/5e5b8acaed6bd4191bffc4e01c11ef8f_915a8bdc-c6d6-4576-8313-67faf41564ba.jpg?v=1549503121",
     text: "I have 12 pairs of socks to give away that have never been worn! They're adult men's, size medium. Email me if interested! maxinea@gmail.com",
-    comments: [{author: "Ally"}, {message: "I want those socks! Email me! allyl@gmail.com"}]
+    comments: []
 
     //date: new Date(Date.now())
   },
@@ -27,7 +27,7 @@ const postSeed = [
     zipcode:"85296",
     imageLink: "https://cdn.aws.toolstation.com/images/141020-UK/800/30543.jpg",
     text: "Einhell 139cc 46cm Petrol Lawnmower GC PM46 lawnmower in great condition. Email me if interested. charlieb@dogood.org ",
-    comments: [{author: "Brian"}, {message: "I want it! Email me! brianl@gmail.com"}]
+    comments: []
 
     //date: new Date(Date.now())
   },
@@ -39,7 +39,7 @@ const postSeed = [
     zipcode:"85233",
     imageLink: "https://assets.simplyrecipes.com/wp-content/uploads/2014/08/banana-bread-vertical-d-1200.jpg",
     text: "I have 6 loaves of fresh banana bread left over from a bake sale - just made this morning with my own family recipe! Not vegan, not gluten-free. Hurry up before they're gone! Email me!",
-    comments: [{author: "Gina"}, {message: "I want that banana bread! Email me! ginal@gmail.com"}]
+    comments: []
 
     //date: new Date(Date.now())
   }

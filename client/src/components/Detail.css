@@ -15,10 +15,6 @@
           box-shadow: 5px 10px #888888;
 }
 
-.Detail_info .post_box .post_info .postImage {
-  width: 200px;
-}
-
 .Detail_info .post_box .post_info .btn-group float-left {
   margin: 0;
   padding-left: 5%;
@@ -42,5 +38,20 @@
 
 .comments, .add-comment {
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .postImage {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .postImage {
+    width: 100px;
+  }
+  .post_title, .post_description {
+    font-size: 22px;
+  }
 }
 /*# sourceMappingURL=Detail.css.map */

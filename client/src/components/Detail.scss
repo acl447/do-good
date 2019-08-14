@@ -25,10 +25,6 @@
         
             
 
-            .postImage {
-
-              width: 200px;
-            }
 
             .btn-group float-left {
                 margin: 0;
@@ -61,6 +57,27 @@
     text-align: center;
  }
 
+
+@media only screen and (min-width: 600px) {
+
+  .postImage {
+
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .postImage {
+
+    width: 100px;
+  }
+  
+  .post_title, .post_description {
+
+    font-size: 22px;
+  }
+}
 
 
  
