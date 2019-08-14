@@ -1,11 +1,9 @@
 .about_title {
-  text-shadow: 3px 2px black;
   text-align: center;
 }
 
 main {
-  background-image: url("Helping.jpg");
-  background-size: cover;
+  background-image: url("pow-star.png");
   background-position: center;
   background-color: #cccccc;
 }

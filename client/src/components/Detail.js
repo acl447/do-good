@@ -115,14 +115,14 @@ class Detail extends Component {
 
   render() {
     return (
-      <Container id="container" fluid>
+      <Container fluid>
 
 
         <Row>
           <Col size="md-12">
 
 
-            <div className="Detail_info">
+            <div className="Detail_info mt-5">
 
               <div className="post_box">
 
@@ -138,7 +138,7 @@ class Detail extends Component {
                   </h2>
 
 
-                  <Link to="/home" className="back">← Back to Home</Link>
+                  {/* <Link to="/home" className="back">← Back to Home</Link> */}
                 </div>
 
               </div>
@@ -164,8 +164,9 @@ class Detail extends Component {
           </Col>
         </Row>
         <Row className="mt-5">
-          <Col size="md-6">
-            <h2>Add A Comment</h2>
+          
+          <Col size="md-4">
+            <h2 className="add-comment mt-5">Add A Comment</h2>
             <form>
               <Input placeholder="Your name"
                 onChange={this.handleInputChange}
@@ -178,18 +179,22 @@ class Detail extends Component {
               <FormBtn disabled={!(this.state.author && this.state.message)} onClick={this.handleFormSubmit}>Submit</FormBtn>
             </form>
           </Col>
+         
 
-          <Col size="md-6">
-            <h2>Comments</h2>
+          <Col size="md-8">
+            <h2 className="comments mt-5">Comments</h2>
             <div>
               {this.showComments()}
             </div>
           </Col>
+        
         </Row>
         <Row>
+         
           <Col size="md-12">
-            {/* <Link to="/home">← Back to Home</Link> */}
+            <Link to="/home" className="float-right mr-5 mb-5">← Back to Home</Link>
           </Col>
+         
         </Row>
       </Container>
     );

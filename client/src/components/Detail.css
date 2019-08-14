@@ -1,8 +1,6 @@
-.Detail_info {
-  background-color: lightcyan;
-  width: 100%;
-  height: 1000px;
-  background-size: cover;
+.detail-container {
+  background: white url("../pages/pow-star.png");
+  overflow-x: hidden;
 }
 
 .Detail_info .post_box .post_info {
@@ -40,5 +38,9 @@
   margin-top: 56px;
   -webkit-box-shadow: 5px 10px #888888;
           box-shadow: 5px 10px #888888;
+}
+
+.comments, .add-comment {
+  text-align: center;
 }
 /*# sourceMappingURL=Detail.css.map */

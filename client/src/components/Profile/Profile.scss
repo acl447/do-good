@@ -1,14 +1,14 @@
 .profile_page {
-    background-image: url("./Do-Well.jpg");
+    background-image: url("../../pages/pow-star.png");
     height: 1600px; 
     overflow-x: hidden;
     // overflow-y: scroll;
     position: relative;
 
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-position: center;
+    // background-repeat: repeat;
+    // background-size: cover;
    
 
 }
@@ -42,8 +42,8 @@
 
 }
 .my-profile {
-    text-shadow: 3px 2px black;
-    color: white; 
+    // text-shadow: 3px 2px black;
+    // color: white; 
     text-align: center;  
  }
 
